@@ -36,8 +36,14 @@ class HumanListViewModel: ObservableObject {
                         
                         return Human(name: name, nickname: nickname, birthdate: date, phoneNumber: phoneNumber, email: email, imageData: imageData)
                     }
+                    
+                    // Sorting fetchedHumans by nextBirthday's month and day
                     DispatchQueue.main.async {
-                        self.humans = fetchedHumans
+                        self.humans = fetchedHumans.sorted { human1, human2 in
+                            let monthAndDay1 = (Calendar.current.component(.month, from: human1.nextBirthday), Calendar.current.component(.day, from: human1.nextBirthday))
+                            let monthAndDay2 = (Calendar.current.component(.month, from: human2.nextBirthday), Calendar.current.component(.day, from: human2.nextBirthday))
+                            return monthAndDay1 < monthAndDay2
+                        }
                     }
                 }
             } else {
@@ -45,4 +51,5 @@ class HumanListViewModel: ObservableObject {
             }
         }
     }
+
 }

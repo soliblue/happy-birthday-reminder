@@ -11,7 +11,7 @@ struct AvatarView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size, height: size)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
                     .shadow(radius: 1)
             } else {
                 Image(systemName: "person.crop.square.fill")

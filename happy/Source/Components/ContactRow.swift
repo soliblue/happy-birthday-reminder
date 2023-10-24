@@ -3,8 +3,18 @@ import Contacts
 
 struct ContactRow: View {
     let contact: CNContact
-    @State private var selectedDate: Date = Date()
+    @State private var selectedDate: Date
     var viewModel: HumanCreateViewModel
+    
+    init(contact: CNContact, viewModel: HumanCreateViewModel) {
+        self.contact = contact
+        self.viewModel = viewModel
+        if let birthdate = contact.birthday?.date {
+            _selectedDate = State(initialValue: birthdate)
+        } else {
+            _selectedDate = State(initialValue: Date())
+        }
+    }
     
     var body: some View {
         HStack {

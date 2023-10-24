@@ -1,31 +1,30 @@
 import SwiftUI
 
 struct HumanDetailView: View {
+    @State var now = Date() // This will keep updating
     var human: Human
+    
     var body: some View {
-        ScrollView {
+        let timeTillBirthday = now.difference(to: human.nextBirthday)
+        
+        return ScrollView {
             VStack(alignment: .center, spacing: 20) {
                 AvatarView(imageData: human.imageData, size: 100)
-                Text(human.name)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text(human.nextBirthday.longString)
-                    .font(.title)
-                if let nickname = human.nickname {
-                    Text("Nickname: \(nickname)")
-                        .font(.subheadline)
-                }
-                if let phoneNumber = human.phoneNumber {
-                    Text("Phone: \(phoneNumber)")
-                        .font(.subheadline)
-                }
-                if let email = human.email {
-                    Text("Email: \(email)")
-                        .font(.subheadline)
-                }
+                Text("\(human.age) years old")
+                    .font(.title2)
+                    .foregroundColor(.secondary)
+                Spacer()
+                TimeView(title: "Time till Birthday", days: timeTillBirthday.days, hours: timeTillBirthday.hours, minutes: timeTillBirthday.minutes, seconds: timeTillBirthday.seconds)
+                
             }
             .padding()
+            .onAppear {
+                // Start a timer that fires every second
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                    now = Date()
+                }
+            }
         }
-        .navigationBarTitle(human.name, displayMode: .inline)
+        .navigationBarTitle(human.nickname ?? human.name, displayMode: .inline)
     }
 }

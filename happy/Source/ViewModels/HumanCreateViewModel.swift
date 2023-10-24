@@ -17,7 +17,7 @@ class HumanCreateViewModel: ObservableObject {
             if granted {
                 self.contactsService.fetchContacts { contacts in
                     DispatchQueue.main.async {
-                        self.contacts = contacts.filter { $0.birthday == nil }
+                        self.contacts = contacts
                     }
                 }
             } else {
