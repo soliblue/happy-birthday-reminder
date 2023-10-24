@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB7A70EE2AE68AAB009874C8 /* happyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* happyApp.swift */; };
-		FB7A70F02AE68AAB009874C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70EF2AE68AAB009874C8 /* ContentView.swift */; };
+		FB53582A2AE6DC150047A61F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* AvatarView.swift */; };
+		FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateHelpers.swift */; };
+		FB5358302AE6F4E10047A61F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = FB53582F2AE6F4E10047A61F /* SwiftUIX */; };
+		FB5358322AE7CB680047A61F /* ContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactsService.swift */; };
+		FB5358342AE7D1040047A61F /* HumanCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358332AE7D1040047A61F /* HumanCreateViewModel.swift */; };
+		FB5358362AE7D3100047A61F /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358352AE7D3100047A61F /* ContactRow.swift */; };
+		FB7A70EE2AE68AAB009874C8 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* Main.swift */; };
 		FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F12AE68AAD009874C8 /* Assets.xcassets */; };
-		FB7A70F52AE68AAD009874C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F42AE68AAD009874C8 /* Preview Assets.xcassets */; };
-		FB7A70F72AE68AAD009874C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70F62AE68AAD009874C8 /* Persistence.swift */; };
-		FB7A70FA2AE68AAD009874C8 /* happy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70F82AE68AAD009874C8 /* happy.xcdatamodeld */; };
 		FB7A71052AE68AAD009874C8 /* happyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71042AE68AAD009874C8 /* happyTests.swift */; };
 		FB7A710F2AE68AAD009874C8 /* happyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A710E2AE68AAD009874C8 /* happyUITests.swift */; };
 		FB7A71112AE68AAD009874C8 /* happyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71102AE68AAD009874C8 /* happyUITestsLaunchTests.swift */; };
+		FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* HomeView.swift */; };
+		FB7A71262AE68B06009874C8 /* HumanCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71252AE68B06009874C8 /* HumanCreateView.swift */; };
+		FB7A71282AE68B1A009874C8 /* HumanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71272AE68B1A009874C8 /* HumanListView.swift */; };
+		FB7A712A2AE68B2C009874C8 /* HumanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */; };
+		FB7A712C2AE68B7A009874C8 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A712B2AE68B7A009874C8 /* Human.swift */; };
+		FB7A712E2AE68B93009874C8 /* HumanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A712D2AE68B93009874C8 /* HumanListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +44,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB5358292AE6DC150047A61F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		FB53582B2AE6E32E0047A61F /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		FB5358312AE7CB680047A61F /* ContactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsService.swift; sourceTree = "<group>"; };
+		FB5358332AE7D1040047A61F /* HumanCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanCreateViewModel.swift; sourceTree = "<group>"; };
+		FB5358352AE7D3100047A61F /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
+		FB5358372AE7DF1A0047A61F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB7A70EA2AE68AAB009874C8 /* happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7A70ED2AE68AAB009874C8 /* happyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happyApp.swift; sourceTree = "<group>"; };
-		FB7A70EF2AE68AAB009874C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB7A70ED2AE68AAB009874C8 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		FB7A70F12AE68AAD009874C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB7A70F42AE68AAD009874C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB7A70F62AE68AAD009874C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		FB7A70F92AE68AAD009874C8 /* happy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = happy.xcdatamodel; sourceTree = "<group>"; };
 		FB7A70FB2AE68AAD009874C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7A71002AE68AAD009874C8 /* happyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7A71042AE68AAD009874C8 /* happyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happyTests.swift; sourceTree = "<group>"; };
 		FB7A710A2AE68AAD009874C8 /* happyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7A710E2AE68AAD009874C8 /* happyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happyUITests.swift; sourceTree = "<group>"; };
 		FB7A71102AE68AAD009874C8 /* happyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB7A71232AE68AEA009874C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB7A71252AE68B06009874C8 /* HumanCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanCreateView.swift; sourceTree = "<group>"; };
+		FB7A71272AE68B1A009874C8 /* HumanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListView.swift; sourceTree = "<group>"; };
+		FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanDetailView.swift; sourceTree = "<group>"; };
+		FB7A712B2AE68B7A009874C8 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		FB7A712D2AE68B93009874C8 /* HumanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5358302AE6F4E10047A61F /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +93,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB53582D2AE6E63D0047A61F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FB5358292AE6DC150047A61F /* AvatarView.swift */,
+				FB5358352AE7D3100047A61F /* ContactRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FB5358382AE7E34F0047A61F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FB7A711D2AE68AB7009874C8 /* Views */,
+				FB7A711E2AE68ABD009874C8 /* Models */,
+				FB7A71202AE68AC6009874C8 /* Helpers */,
+				FB5358392AE7E3FF0047A61F /* Services */,
+				FB53582D2AE6E63D0047A61F /* Components */,
+				FB7A711F2AE68AC1009874C8 /* ViewModels */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FB5358392AE7E3FF0047A61F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB5358312AE7CB680047A61F /* ContactsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FB7A70E12AE68AAB009874C8 = {
 			isa = PBXGroup;
 			children = (
+				FB5358372AE7DF1A0047A61F /* README.md */,
 				FB7A70EC2AE68AAB009874C8 /* happy */,
 				FB7A71032AE68AAD009874C8 /* happyTests */,
 				FB7A710D2AE68AAD009874C8 /* happyUITests */,
@@ -99,23 +147,12 @@
 		FB7A70EC2AE68AAB009874C8 /* happy */ = {
 			isa = PBXGroup;
 			children = (
-				FB7A70ED2AE68AAB009874C8 /* happyApp.swift */,
-				FB7A70EF2AE68AAB009874C8 /* ContentView.swift */,
 				FB7A70F12AE68AAD009874C8 /* Assets.xcassets */,
-				FB7A70F62AE68AAD009874C8 /* Persistence.swift */,
+				FB5358382AE7E34F0047A61F /* Source */,
+				FB7A70ED2AE68AAB009874C8 /* Main.swift */,
 				FB7A70FB2AE68AAD009874C8 /* Info.plist */,
-				FB7A70F82AE68AAD009874C8 /* happy.xcdatamodeld */,
-				FB7A70F32AE68AAD009874C8 /* Preview Content */,
 			);
 			path = happy;
-			sourceTree = "<group>";
-		};
-		FB7A70F32AE68AAD009874C8 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FB7A70F42AE68AAD009874C8 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		FB7A71032AE68AAD009874C8 /* happyTests */ = {
@@ -135,6 +172,42 @@
 			path = happyUITests;
 			sourceTree = "<group>";
 		};
+		FB7A711D2AE68AB7009874C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB7A71232AE68AEA009874C8 /* HomeView.swift */,
+				FB7A71252AE68B06009874C8 /* HumanCreateView.swift */,
+				FB7A71272AE68B1A009874C8 /* HumanListView.swift */,
+				FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB7A711E2AE68ABD009874C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB7A712B2AE68B7A009874C8 /* Human.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB7A711F2AE68AC1009874C8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB7A712D2AE68B93009874C8 /* HumanListViewModel.swift */,
+				FB5358332AE7D1040047A61F /* HumanCreateViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FB7A71202AE68AC6009874C8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB53582B2AE6E32E0047A61F /* DateHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +224,9 @@
 			dependencies = (
 			);
 			name = happy;
+			packageProductDependencies = (
+				FB53582F2AE6F4E10047A61F /* SwiftUIX */,
+			);
 			productName = happy;
 			productReference = FB7A70EA2AE68AAB009874C8 /* happy.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +299,9 @@
 				Base,
 			);
 			mainGroup = FB7A70E12AE68AAB009874C8;
+			packageReferences = (
+				FB53582E2AE6F4E10047A61F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = FB7A70EB2AE68AAB009874C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,7 +318,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB7A70F52AE68AAD009874C8 /* Preview Assets.xcassets in Resources */,
 				FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +343,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB7A70FA2AE68AAD009874C8 /* happy.xcdatamodeld in Sources */,
-				FB7A70F72AE68AAD009874C8 /* Persistence.swift in Sources */,
-				FB7A70F02AE68AAB009874C8 /* ContentView.swift in Sources */,
-				FB7A70EE2AE68AAB009874C8 /* happyApp.swift in Sources */,
+				FB5358322AE7CB680047A61F /* ContactsService.swift in Sources */,
+				FB7A712C2AE68B7A009874C8 /* Human.swift in Sources */,
+				FB7A712A2AE68B2C009874C8 /* HumanDetailView.swift in Sources */,
+				FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */,
+				FB7A71262AE68B06009874C8 /* HumanCreateView.swift in Sources */,
+				FB7A712E2AE68B93009874C8 /* HumanListViewModel.swift in Sources */,
+				FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */,
+				FB7A70EE2AE68AAB009874C8 /* Main.swift in Sources */,
+				FB53582A2AE6DC150047A61F /* AvatarView.swift in Sources */,
+				FB7A71282AE68B1A009874C8 /* HumanListView.swift in Sources */,
+				FB5358342AE7D1040047A61F /* HumanCreateViewModel.swift in Sources */,
+				FB5358362AE7D3100047A61F /* ContactRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = happy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -409,6 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = happy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -426,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"happy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = X52A94XDJB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -455,7 +543,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"happy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = X52A94XDJB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -594,18 +682,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		FB7A70F82AE68AAD009874C8 /* happy.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FB7A70F92AE68AAD009874C8 /* happy.xcdatamodel */,
-			);
-			currentVersion = FB7A70F92AE68AAD009874C8 /* happy.xcdatamodel */;
-			path = happy.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		FB53582E2AE6F4E10047A61F /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB53582F2AE6F4E10047A61F /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB53582E2AE6F4E10047A61F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB7A70E22AE68AAB009874C8 /* Project object */;
 }
