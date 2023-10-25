@@ -23,7 +23,6 @@
 		FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* HomeView.swift */; };
 		FB7A71262AE68B06009874C8 /* HumanCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71252AE68B06009874C8 /* HumanCreateView.swift */; };
 		FB7A71282AE68B1A009874C8 /* HumanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71272AE68B1A009874C8 /* HumanListView.swift */; };
-		FB7A712A2AE68B2C009874C8 /* HumanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */; };
 		FB7A712C2AE68B7A009874C8 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A712B2AE68B7A009874C8 /* Human.swift */; };
 		FB7A712E2AE68B93009874C8 /* HumanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A712D2AE68B93009874C8 /* HumanListViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		FB7A71232AE68AEA009874C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB7A71252AE68B06009874C8 /* HumanCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanCreateView.swift; sourceTree = "<group>"; };
 		FB7A71272AE68B1A009874C8 /* HumanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListView.swift; sourceTree = "<group>"; };
-		FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanDetailView.swift; sourceTree = "<group>"; };
 		FB7A712B2AE68B7A009874C8 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		FB7A712D2AE68B93009874C8 /* HumanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +182,6 @@
 				FB7A71232AE68AEA009874C8 /* HomeView.swift */,
 				FB7A71252AE68B06009874C8 /* HumanCreateView.swift */,
 				FB7A71272AE68B1A009874C8 /* HumanListView.swift */,
-				FB7A71292AE68B2C009874C8 /* HumanDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,7 +348,6 @@
 			files = (
 				FB5358322AE7CB680047A61F /* ContactsService.swift in Sources */,
 				FB7A712C2AE68B7A009874C8 /* Human.swift in Sources */,
-				FB7A712A2AE68B2C009874C8 /* HumanDetailView.swift in Sources */,
 				FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* HumanCreateView.swift in Sources */,
 				FB7A712E2AE68B93009874C8 /* HumanListViewModel.swift in Sources */,

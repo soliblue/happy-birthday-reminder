@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct HumanCreateView: View {
     @ObservedObject var viewModel = HumanCreateViewModel()
     
@@ -16,11 +15,5 @@ struct HumanCreateView: View {
         }
         .padding(.top)
         .navigationBarTitle("Add Birthday", displayMode: .inline)
-    }
-}
-
-struct HumanCreateView_Previews: PreviewProvider {
-    static var previews: some View {
-        HumanCreateView()
     }
 }

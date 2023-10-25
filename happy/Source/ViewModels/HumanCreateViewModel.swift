@@ -37,12 +37,23 @@ class HumanCreateViewModel: ObservableObject {
     }
     
     func filteredContacts() -> [CNContact] {
-        if searchText.isEmpty {
+        let searchWords = searchText.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: " ")
+
+        if searchWords.isEmpty {
             return contacts
         } else {
-            return contacts.filter {
-                $0.givenName.contains(searchText) || $0.familyName.contains(searchText)
+            return contacts.filter { contact in
+                let contactWords = ["\(contact.givenName)", "\(contact.familyName)", "\(contact.nickname)"].joined(separator: " ").split(separator: " ")
+
+                return searchWords.allSatisfy { searchWord in
+                    contactWords.contains { contactWord in
+                        contactWord.localizedCaseInsensitiveContains(searchWord)
+                    }
+                }
             }
         }
     }
+
+
+
 }

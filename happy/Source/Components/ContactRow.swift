@@ -16,10 +16,20 @@ struct ContactRow: View {
         }
     }
     
+    var displayName: String {
+        if !contact.nickname.isEmpty {
+            return contact.nickname
+        } else {
+            return contact.givenName + " " + contact.familyName
+        }
+    }
+    
     var body: some View {
         HStack {
             AvatarView(imageData: contact.imageData, size: 25)
-            Text(contact.givenName + " " + contact.familyName)
+            Text(displayName)
+                .lineLimit(1)
+                .truncationMode(.tail)
             Spacer()
             DatePicker("", selection: $selectedDate, displayedComponents: .date)
                 .datePickerStyle(CompactDatePickerStyle())

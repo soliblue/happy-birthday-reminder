@@ -11,10 +11,10 @@ struct AvatarView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size, height: size)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .clipShape(Circle())
                     .shadow(radius: 1)
             } else {
-                Image(systemName: "person.crop.square.fill")
+                Image(systemName: "person.crop.circle.fill")
                     .resizable()
                     .frame(width: size, height: size)
                     .foregroundColor(.gray)
