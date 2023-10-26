@@ -1,6 +1,6 @@
 import Foundation
 
-struct Human: Identifiable {
+struct Human: Identifiable, CustomStringConvertible, Equatable {
     var id = UUID()
     var name: String
     var nickname: String?
@@ -29,18 +29,33 @@ struct Human: Identifiable {
     
     var nextBirthday: Date {
         let calendar = Calendar.current
-        let now = Date()
-        var nextBirthdayComponents = calendar.dateComponents([.day, .month], from: birthdate)
-        nextBirthdayComponents.year = calendar.component(.year, from: now)
+        let today = calendar.startOfDay(for: Date())
+        var components = calendar.dateComponents([.day, .month], from: birthdate)
+        components.year = calendar.component(.year, from: today)
         
-        var nextBirthday = calendar.date(from: nextBirthdayComponents) ?? now
+        let thisYearsBirthday = calendar.date(from: components)!
         
-        if nextBirthday < now {
-            // If the birthday has already occurred this year, calculate next year's birthday
-            nextBirthdayComponents.year! += 1
-            nextBirthday = calendar.date(from: nextBirthdayComponents) ?? now
+        if today > thisYearsBirthday {
+            let threeMonthsAgo = calendar.date(byAdding: .month, value: -3, to: today)!
+            return thisYearsBirthday > threeMonthsAgo ? thisYearsBirthday : calendar.date(byAdding: .year, value: 1, to: thisYearsBirthday)!
         }
         
-        return nextBirthday
+        return thisYearsBirthday
+        
     }
+    
+    var description: String {
+        return "Human(name: \(name), nickname: \(String(describing: nickname)), birthdate: \(birthdate), age: \(age), nextBirthday: \(nextBirthday))"
+    }
+    
+    func hasBirthday() -> Bool {
+        let calendar = Calendar.current
+        let now = Date()
+        
+        let nowComponents = calendar.dateComponents([.day, .month], from: now)
+        let birthComponents = calendar.dateComponents([.day, .month], from: birthdate)
+        
+        return nowComponents.day == birthComponents.day && nowComponents.month == birthComponents.month
+    }
+    
 }

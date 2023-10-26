@@ -26,7 +26,6 @@ struct ContactRow: View {
     
     var body: some View {
         HStack {
-            AvatarView(imageData: contact.imageData, size: 25)
             Text(displayName)
                 .lineLimit(1)
                 .truncationMode(.tail)
@@ -37,6 +36,6 @@ struct ContactRow: View {
                 .onChange(of: selectedDate) {
                     viewModel.updateBirthday(for: contact, with: $0)
                 }
-        }
+        }.padding(.vertical)
     }
 }

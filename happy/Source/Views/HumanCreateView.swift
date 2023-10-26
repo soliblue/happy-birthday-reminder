@@ -6,6 +6,7 @@ struct HumanCreateView: View {
     var body: some View {
         VStack {
             TextField("Search", text: $viewModel.searchText)
+                .font(.callout)
                 .padding()
             List {
                 ForEach(viewModel.filteredContacts(), id: \.identifier) { contact in
