@@ -18,8 +18,6 @@ struct HumanCardView: View {
     
     var body: some View {
         HStack {
-            // Adding the Day Element
-            // Adding the Day Element
             if !human.hasBirthday() {
                 Text(String(format: "%02d", Calendar.current.component(.day, from: human.birthdate)))
                     .font(.title2)
@@ -63,7 +61,7 @@ struct HumanCardView: View {
                         BirthdayIcon()
                     }
                     .sheet(isPresented: $showShareSheet) {
-                        ShareSheet(items: ["Happy Birthday 🎉 \(String(describing: human.nickname ?? human.givenName))"])
+                        ShareSheet(items: ["Happy Birthday 🎉 \(human.nickname ?? human.givenName ?? "")"])
                     }
                 } else {
                     Text(human.nextBirthday.relativeString).font(.caption)
