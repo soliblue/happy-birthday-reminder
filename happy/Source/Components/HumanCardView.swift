@@ -26,15 +26,15 @@ struct HumanCardView: View {
                     .foregroundColor(.primary)
                     .padding(.trailing, 10)
                     .overlay(
-                        LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom)
+                        LinearGradient(gradient: Gradient(colors: [.primary, .primary]), startPoint: .top, endPoint: .bottom)
                     )
                     .mask(Text(String(format: "%02d", Calendar.current.component(.day, from: human.birthdate))).font(.title))
             } else {
                 Text(String(format: "%02d", Calendar.current.component(.day, from: human.birthdate)))
-                    .font(.title)
+                    .font(.title2)
                     .padding(.trailing, 10)
                     .overlay(
-                        LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .top, endPoint: .bottom)
+                        LinearGradient(gradient: Gradient(colors: [.primary, .secondary]), startPoint: .top, endPoint: .bottom)
                     )
                     .mask(Text(String(format: "%02d", Calendar.current.component(.day, from: human.birthdate))).font(.title))
             }
@@ -44,8 +44,8 @@ struct HumanCardView: View {
             AvatarView(imageData: human.imageData, size: 45)
             VStack(alignment: .leading) {
                 Text(human.nickname ?? human.name).font(.headline)
-                if human.age > 0 && human.age < 150 {
-                    Text("\(human.age) years old").font(.subheadline)
+                if let validAge = human.age {
+                    Text("\(validAge) years old").font(.subheadline)
                 }
 
             }

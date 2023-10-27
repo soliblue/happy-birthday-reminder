@@ -3,18 +3,25 @@ import Foundation
 struct Human: Identifiable, CustomStringConvertible, Equatable {
     var id = UUID()
     var name: String
+    var givenName: String?
+    var familyName: String?
     var nickname: String?
     var birthdate: Date
     var phoneNumber: String?
     var email: String?
     var imageData: Data?
     
-    var age: Int {
+    var age: Int? {
         let calendar = Calendar.current
         let now = Date()
         let ageComponents = calendar.dateComponents([.year], from: birthdate, to: now)
-        return ageComponents.year ?? 0
+        if let ageValue = ageComponents.year, ageValue > 0, ageValue <= 150 {
+            return ageValue
+        } else {
+            return nil
+        }
     }
+
     
     var birthdayPassed: Bool {
         let calendar = Calendar.current
