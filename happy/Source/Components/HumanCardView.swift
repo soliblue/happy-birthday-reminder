@@ -42,13 +42,17 @@ struct HumanCardView: View {
 
             
             AvatarView(imageData: human.imageData, size: 45)
+//                .blur(radius: 5)
             VStack(alignment: .leading) {
-                Text(human.nickname ?? human.name).font(.headline)
+                Text(human.nickname ?? human.givenName ?? human.familyName ?? "")
+                    .font(.headline)
+//                    .blur(radius: (human.givenName == "Jeffry" || human.givenName == "Whitney" || human.familyName == "Dahroug") ? 0 : 5)
+
                 if let validAge = human.age {
                     Text("\(validAge) years old").font(.subheadline)
                 }
-
             }
+
             
             Spacer()
             VStack {
@@ -59,7 +63,7 @@ struct HumanCardView: View {
                         BirthdayIcon()
                     }
                     .sheet(isPresented: $showShareSheet) {
-                        ShareSheet(items: ["Happy Birthday 🎉 \(human.nickname ?? human.name)"])
+                        ShareSheet(items: ["Happy Birthday 🎉 \(String(describing: human.nickname ?? human.givenName))"])
                     }
                 } else {
                     Text(human.nextBirthday.relativeString).font(.caption)

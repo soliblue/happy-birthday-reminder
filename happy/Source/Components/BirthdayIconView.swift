@@ -14,6 +14,6 @@ struct BirthdayIcon: View {
                 .frame(width: 24, height: 24)
         )
         .frame(width: 24, height: 24)  // Adjust frame to match icon size
-        .padding()  // Add padding if necessary
+        .padding(.horizontal)  // Add padding if necessary
     }
 }

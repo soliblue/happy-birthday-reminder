@@ -18,6 +18,7 @@ struct AvatarView: View {
                     .resizable()
                     .frame(width: size, height: size)
                     .foregroundColor(.gray)
+                
             }
         }
     }

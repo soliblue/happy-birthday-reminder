@@ -31,9 +31,16 @@ struct HomeView: View {
                 
             }
             .sheet(isPresented: $isShowingCreateView) {
-                HumanCreateView()
+                NavigationView {
+                    VStack {
+                        HumanCreateView()
+                    }
+                    .navigationBarItems(trailing: Button("Close") {
+                        isShowingCreateView = false
+                    })
+                    .navigationBarTitle("", displayMode: .inline)
+                }
             }
-            
         }
     }
 }

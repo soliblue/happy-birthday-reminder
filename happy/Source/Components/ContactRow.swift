@@ -4,6 +4,9 @@ import Contacts
 struct ContactRow: View {
     let contact: CNContact
     @State private var selectedDate: Date
+    @State private var isDatePickerShown: Bool = false
+    @State private var isDatePickerModalShown: Bool = false
+    
     var viewModel: HumanCreateViewModel
     
     init(contact: CNContact, viewModel: HumanCreateViewModel) {
@@ -11,8 +14,10 @@ struct ContactRow: View {
         self.viewModel = viewModel
         if let birthdate = contact.birthday?.date {
             _selectedDate = State(initialValue: birthdate)
+            _isDatePickerShown = State(initialValue: true)
         } else {
             _selectedDate = State(initialValue: Date())
+            _isDatePickerShown = State(initialValue: false)
         }
     }
     
@@ -29,13 +34,46 @@ struct ContactRow: View {
             Text(displayName)
                 .lineLimit(1)
                 .truncationMode(.tail)
+//                .blur(radius: 5)
             Spacer()
-            DatePicker("", selection: $selectedDate, displayedComponents: .date)
-                .datePickerStyle(CompactDatePickerStyle())
-                .labelsHidden()
-                .onChange(of: selectedDate) {
-                    viewModel.updateBirthday(for: contact, with: $0)
+            if isDatePickerShown {
+                DatePicker("", selection: $selectedDate, displayedComponents: .date)
+                    .datePickerStyle(CompactDatePickerStyle())
+                    .labelsHidden()
+                    .onChange(of: selectedDate) {
+                        viewModel.updateBirthday(for: contact, with: $0)
+                    }
+            } else {
+                Button(action: {
+                    isDatePickerModalShown = true
+                }) {
+                    Text("Enter Birthdate")
                 }
-        }.padding(.vertical)
+                .sheet(isPresented: $isDatePickerModalShown) {
+                    NavigationView {
+                        VStack {
+                            DatePicker("", selection: $selectedDate, displayedComponents: .date)
+                                .datePickerStyle(WheelDatePickerStyle())
+                                .labelsHidden()
+                        }
+                        .navigationBarItems(trailing: Button("Close") {
+                            isDatePickerModalShown = false
+                        })
+                        .onDisappear {
+                            let calendar = Calendar.current
+                            let today = calendar.startOfDay(for: Date())
+                            let selectedDay = calendar.startOfDay(for: selectedDate)
+                            
+                            if today != selectedDay {
+                                isDatePickerShown = true
+                                viewModel.updateBirthday(for: contact, with: selectedDate)
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .padding(.vertical)
     }
 }

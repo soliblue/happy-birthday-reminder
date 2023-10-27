@@ -11,15 +11,15 @@ struct MonthInfo: Comparable, Hashable {
 
 
 class HumanListViewModel: ObservableObject {
-    static let birthdayNotificationIdentifier = "BirthdayNotification"
     @Published var humans: [Human] = []
-    
+    @Published var searchText: String = ""
     private let contactsService = ContactsService()
     private let notificationService = NotificationService()
-    
+    static let birthdayNotificationIdentifier = "BirthdayNotification"
+
     // Group by month
     var monthSections: [MonthInfo: [Human]] {
-        Dictionary(grouping: humans, by: { MonthInfo(number: Calendar.current.component(.month, from: $0.nextBirthday), name: $0.nextBirthday.month) })
+        Dictionary(grouping: filteredHumans(), by: { MonthInfo(number: Calendar.current.component(.month, from: $0.nextBirthday), name: $0.nextBirthday.month) })
     }
     
     func fetchHumans() {
@@ -78,6 +78,24 @@ class HumanListViewModel: ObservableObject {
 
 
                 self.notificationService.scheduleNotification(title: title, body: body,categoryIdentifier: HumanListViewModel.birthdayNotificationIdentifier, triggerDate: human.nextBirthday, imageData: human.imageData)
+            }
+        }
+    }
+    
+    func filteredHumans() -> [Human] {
+        let searchWords = searchText.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: " ")
+
+        if searchWords.isEmpty {
+            return humans
+        } else {
+            return humans.filter { human in
+                let contactWords = ["\(human.givenName)", "\(human.familyName)", "\(human.nickname)"].joined(separator: " ").split(separator: " ")
+
+                return searchWords.allSatisfy { searchWord in
+                    contactWords.contains { contactWord in
+                        contactWord.localizedCaseInsensitiveContains(searchWord)
+                    }
+                }
             }
         }
     }
