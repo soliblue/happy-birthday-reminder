@@ -32,6 +32,7 @@ struct ContactRow: View {
     var body: some View {
         HStack {
             Text(displayName)
+                .font(.headline)
                 .lineLimit(1)
                 .truncationMode(.tail)
 //                .blur(radius: 5)
@@ -46,9 +47,9 @@ struct ContactRow: View {
             } else {
                 Button(action: {
                     isDatePickerModalShown = true
-                }) {
-                    Text("Enter Birthdate")
-                }
+                }){
+                    Text("add birthdate").font(.callout)
+                }.buttonStyle(.bordered).foregroundColor(Color.primary)
                 .sheet(isPresented: $isDatePickerModalShown) {
                     NavigationView {
                         VStack {
@@ -56,7 +57,7 @@ struct ContactRow: View {
                                 .datePickerStyle(WheelDatePickerStyle())
                                 .labelsHidden()
                         }
-                        .navigationBarItems(trailing: Button("Close") {
+                        .navigationBarItems(trailing: Button("close") {
                             isDatePickerModalShown = false
                         })
                         .onDisappear {

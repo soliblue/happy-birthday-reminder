@@ -8,40 +8,45 @@ struct HumanListView: View {
     
     var body: some View {
         ZStack {
-            List{
-                ForEach(Array(viewModel.monthSections.keys).sorted(), id: \.self) { monthInfo in
-                    Section(
-                        header: HStack {
-                            Text(monthInfo.name).font(.headline).id(monthInfo.name)
-                            Spacer()
-                            if collapsedMonths.contains(monthInfo.name) {
-                                Text("\(viewModel.monthSections[monthInfo]?.count ?? 0)")
-                            }
-                        }.contentShape(Rectangle())  // Makes the entire HStack tappable
-                            .onTapGesture {
+            ScrollViewReader { proxy in
+                List{
+                    ForEach(Array(viewModel.monthSections.keys).sorted(), id: \.self) { monthInfo in
+                        Section(
+                            header: HStack {
+                                Text(monthInfo.name).font(.headline).id(monthInfo.name)
+                                Spacer()
                                 if collapsedMonths.contains(monthInfo.name) {
-                                    collapsedMonths.remove(monthInfo.name)
-                                } else {
-                                    collapsedMonths.insert(monthInfo.name)
+                                    Text("\(viewModel.monthSections[monthInfo]?.count ?? 0)")
+                                }
+                            }.contentShape(Rectangle())  // Makes the entire HStack tappable
+                                .onTapGesture {
+                                    if collapsedMonths.contains(monthInfo.name) {
+                                        collapsedMonths.remove(monthInfo.name)
+                                    } else {
+                                        collapsedMonths.insert(monthInfo.name)
+                                    }
+                                }
+                        ) {
+                            if !collapsedMonths.contains(monthInfo.name) {
+                                ForEach(viewModel.monthSections[monthInfo]!, id: \.id) { human in
+                                    HumanCardView(human: human)
                                 }
                             }
-                    ) {
-                        if !collapsedMonths.contains(monthInfo.name) {
-                            ForEach(viewModel.monthSections[monthInfo]!, id: \.id) { human in
-                                HumanCardView(human: human)
-                            }
                         }
+                        .id(monthInfo.name)
                     }
-                    .id(monthInfo.name)
                 }
-            }
-            
-            .animation(.easeInOut(duration: 1.0), value: collapsedMonths)
-            .refreshable {
-                viewModel.fetchHumans()
-            }
-            .onAppear {
-                viewModel.fetchHumans()
+                
+                .animation(.easeInOut(duration: 1.0), value: collapsedMonths)
+                .refreshable {
+                    viewModel.fetchHumans()
+                }
+                .onAppear {
+                    viewModel.fetchHumans()
+                }
+                .onChange(of: viewModel.monthSections) { _ in
+                    scrollToCurrentMonth(using: proxy)
+                }
             }
         }
     }
@@ -56,5 +61,5 @@ struct HumanListView: View {
         }
     }}
 
-    
-    
+
+

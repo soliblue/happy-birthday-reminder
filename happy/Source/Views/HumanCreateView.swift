@@ -15,6 +15,5 @@ struct HumanCreateView: View {
             }
             .listStyle(PlainListStyle()) 
         }
-        .padding(.top)
     }
 }

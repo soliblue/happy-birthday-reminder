@@ -35,7 +35,7 @@ struct HomeView: View {
                     VStack {
                         HumanCreateView()
                     }
-                    .navigationBarItems(trailing: Button("Close") {
+                    .navigationBarItems(trailing: Button("close") {
                         isShowingCreateView = false
                     })
                     .navigationBarTitle("", displayMode: .inline)

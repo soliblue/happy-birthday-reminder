@@ -13,8 +13,13 @@ struct SearchBar: UIViewRepresentable {
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Search"
 
+        if let textField = searchBar.value(forKey: "searchField") as? UITextField {
+            textField.font = UIFont.systemFont(ofSize: 18)  // Change the font size here
+        }
+        
         return searchBar
     }
+
 
     func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
         // Safely update the text property
