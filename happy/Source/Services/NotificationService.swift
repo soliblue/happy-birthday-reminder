@@ -1,6 +1,6 @@
 import UserNotifications
 
-class NotificationsService {
+class NotificationService {
     private let center = UNUserNotificationCenter.current()
     
     func requestAccessAndExecute(_ action: @escaping () -> Void) {

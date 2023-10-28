@@ -11,6 +11,9 @@ struct ContactEditView: View {
                     ContactEditCardView(contact: contact, viewModel: viewModel)
                 }
             }
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
             .listStyle(PlainListStyle()) 
         }.padding(.horizontal)
     }

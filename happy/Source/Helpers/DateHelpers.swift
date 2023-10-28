@@ -9,6 +9,12 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    var shortString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd yyyy"
+        return formatter.string(from: self)
+    }
+    
     var relativeString: String {
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .full

@@ -1,7 +1,7 @@
 import Contacts
 import ContactsUI  // Needed for CNContactViewController.descriptorForRequiredKeys()
 
-class ContactsService {
+class ContactService {
     private let store = CNContactStore()
     
     func requestAccess(completion: @escaping (Bool) -> Void) {
@@ -45,4 +45,26 @@ class ContactsService {
             completion(false)
         }
     }
+    
+    func clearBirthday(for contact: CNContact, completion: @escaping (Bool) -> Void) {
+        // Create a mutable copy of the contact
+        let mutableContact = contact.mutableCopy() as! CNMutableContact
+        
+        // Set the birthday to nil
+        mutableContact.birthday = nil
+        
+        // Create a save request to update the contact
+        let saveRequest = CNSaveRequest()
+        saveRequest.update(mutableContact)
+        
+        do {
+            // Execute the save request
+            try store.execute(saveRequest)
+            completion(true)
+        } catch {
+            print("Failed to clear birthday:", error)
+            completion(false)
+        }
+    }
+
 }

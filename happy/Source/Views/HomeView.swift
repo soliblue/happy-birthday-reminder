@@ -38,7 +38,6 @@ struct HomeView: View {
                     .navigationBarItems(trailing: Button("close") {
                         isShowingCreateView = false
                     })
-                    .navigationBarTitle("", displayMode: .inline)
                 }
             }
         }
