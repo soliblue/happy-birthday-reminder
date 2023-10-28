@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSContactsUsageDescription</key>
-	<string>Access to your contacts makes it easier to import birthdays!</string>
+	<string>We need access to your contacts to keep track of birthdays. Your data stays safe and on-device.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

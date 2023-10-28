@@ -1,10 +1,8 @@
 import SwiftUI
 
-struct HumanListView: View {
+struct ContactListView: View {
     @State private var collapsedMonths = Set<String>()
-    @ObservedObject var viewModel = HumanListViewModel()
-    @State private var isSearchBarExpanded = false  // Flag to check if the search bar should be expanded
-    private let backgroundColor = LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.7), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    @ObservedObject var viewModel = ContactViewModel()
     
     var body: some View {
         ZStack {
@@ -18,35 +16,33 @@ struct HumanListView: View {
                                 if collapsedMonths.contains(monthInfo.name) {
                                     Text("\(viewModel.monthSections[monthInfo]?.count ?? 0)")
                                 }
-                            }.contentShape(Rectangle())  // Makes the entire HStack tappable
-                                .onTapGesture {
-                                    if collapsedMonths.contains(monthInfo.name) {
-                                        collapsedMonths.remove(monthInfo.name)
-                                    } else {
-                                        collapsedMonths.insert(monthInfo.name)
-                                    }
+                            }.contentShape(Rectangle())
+                            .onTapGesture {
+                                if collapsedMonths.contains(monthInfo.name) {
+                                    collapsedMonths.remove(monthInfo.name)
+                                } else {
+                                    collapsedMonths.insert(monthInfo.name)
                                 }
+                            }
                         ) {
                             if !collapsedMonths.contains(monthInfo.name) {
-                                ForEach(viewModel.monthSections[monthInfo]!, id: \.id) { human in
-                                    HumanCardView(human: human)
+                                ForEach(viewModel.monthSections[monthInfo] ?? [], id: \.self) { contact in
+                                    ContactListCardView(contact: contact)
                                 }
+
                             }
                         }
                         .id(monthInfo.name)
                     }
                 }
-                
                 .animation(.easeInOut(duration: 1.0), value: collapsedMonths)
                 .refreshable {
-                    viewModel.fetchHumans()
-                }
-                .onAppear {
-                    viewModel.fetchHumans()
+                    viewModel.fetchContacts()
                 }
                 .onChange(of: viewModel.monthSections) { _ in
                     scrollToCurrentMonth(using: proxy)
                 }
+              
             }
         }
     }

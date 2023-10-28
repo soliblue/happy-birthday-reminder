@@ -1,25 +1,25 @@
 import SwiftUI
 
-struct AvatarView: View {
+struct Avatar: View {
     var imageData: Data?
     var size: CGFloat
     
     var body: some View {
         Group {
-            if let imageData = imageData, let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
+            if let imageData = imageData {
+                Image(uiImage: UIImage(data: imageData)!)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .scaledToFit()
                     .frame(width: size, height: size)
                     .clipShape(Circle())
-                    .shadow(radius: 1)
             } else {
                 Image(systemName: "person.crop.circle.fill")
                     .resizable()
+                    .scaledToFit()
                     .frame(width: size, height: size)
-                    .foregroundColor(.gray)
-                
+                    .clipShape(Circle())
             }
+          
         }
     }
 }

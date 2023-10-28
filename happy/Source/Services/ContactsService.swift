@@ -1,5 +1,5 @@
 import Contacts
-import Foundation
+import ContactsUI  // Needed for CNContactViewController.descriptorForRequiredKeys()
 
 class ContactsService {
     private let store = CNContactStore()
@@ -19,16 +19,8 @@ class ContactsService {
     }
     
     func fetchContacts(completion: @escaping ([CNContact]) -> Void) {
-        let keysToFetch = [
-            CNContactGivenNameKey as CNKeyDescriptor,
-            CNContactFamilyNameKey as CNKeyDescriptor,
-            CNContactNicknameKey as CNKeyDescriptor,
-            CNContactBirthdayKey as CNKeyDescriptor,
-            CNContactImageDataKey as CNKeyDescriptor,
-            CNContactPhoneNumbersKey as CNKeyDescriptor,
-            CNContactEmailAddressesKey as CNKeyDescriptor,
-            CNContactImageDataAvailableKey as CNKeyDescriptor,
-        ]
+        let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
+        let keysToFetch: [CNKeyDescriptor] = [requiredKeys]
         let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
         do {
             let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
@@ -38,6 +30,7 @@ class ContactsService {
             completion([])
         }
     }
+
     
     func updateBirthday(for contact: CNContact, with date: Date, completion: @escaping (Bool) -> Void) {
         let mutableContact = contact.mutableCopy() as! CNMutableContact

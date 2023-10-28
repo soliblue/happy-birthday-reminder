@@ -1,15 +1,15 @@
 import SwiftUI
 import Contacts
 
-struct ContactRow: View {
+struct ContactEditCardView: View {
     let contact: CNContact
     @State private var selectedDate: Date
     @State private var isDatePickerShown: Bool = false
     @State private var isDatePickerModalShown: Bool = false
     
-    var viewModel: HumanCreateViewModel
+    var viewModel: ContactViewModel
     
-    init(contact: CNContact, viewModel: HumanCreateViewModel) {
+    init(contact: CNContact, viewModel: ContactViewModel) {
         self.contact = contact
         self.viewModel = viewModel
         if let birthdate = contact.birthday?.date {
@@ -21,21 +21,12 @@ struct ContactRow: View {
         }
     }
     
-    var displayName: String {
-        if !contact.nickname.isEmpty {
-            return contact.nickname
-        } else {
-            return contact.givenName + " " + contact.familyName
-        }
-    }
-    
     var body: some View {
         HStack {
-            Text(displayName)
+            Text(contact.name)
                 .font(.headline)
                 .lineLimit(1)
                 .truncationMode(.tail)
-//                .blur(radius: 5)
             Spacer()
             if isDatePickerShown {
                 DatePicker("", selection: $selectedDate, displayedComponents: .date)
@@ -64,7 +55,6 @@ struct ContactRow: View {
                             let calendar = Calendar.current
                             let today = calendar.startOfDay(for: Date())
                             let selectedDay = calendar.startOfDay(for: selectedDate)
-                            
                             if today != selectedDay {
                                 isDatePickerShown = true
                                 viewModel.updateBirthday(for: contact, with: selectedDate)

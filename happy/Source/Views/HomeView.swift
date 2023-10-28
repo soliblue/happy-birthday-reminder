@@ -5,7 +5,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                HumanListView()
+                ContactListView()
                 VStack {
                     Spacer()
                     HStack {
@@ -33,7 +33,7 @@ struct HomeView: View {
             .sheet(isPresented: $isShowingCreateView) {
                 NavigationView {
                     VStack {
-                        HumanCreateView()
+                        ContactEditView()
                     }
                     .navigationBarItems(trailing: Button("close") {
                         isShowingCreateView = false
