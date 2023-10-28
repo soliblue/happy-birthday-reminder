@@ -64,6 +64,7 @@ class ContactViewModel: ObservableObject {
         contactsService.updateBirthday(for: contact, with: date) { success in
             if success {
                 print("Saved birthday successfully.")
+                self.fetchContacts()
             } else {
                 print("Failed to save birthday.")
             }
