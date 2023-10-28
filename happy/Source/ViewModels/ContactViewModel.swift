@@ -88,13 +88,10 @@ class ContactViewModel: ObservableObject {
                 let title = "\(contact.name)'s Birthday"
                 let body = "It's \(contact.name)'s birthday today! 🎉"
                 
-                // Replace the actual birthday with a date 30 seconds from now for testing
-                let testTriggerDate = Calendar.current.date(byAdding: .second, value: 60, to: Date())!
-                
                 if let imageData = contact.thumbnailImageData {
-                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: testTriggerDate, imageData: imageData)
+                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.nextBirthday!, imageData: imageData)
                 } else {
-                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: testTriggerDate)
+                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.nextBirthday!)
                 }
             }
         }
