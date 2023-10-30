@@ -8,6 +8,5 @@ struct BirthdayIcon: View {
             .resizable()
             .scaledToFit()
             .frame(width: size, height: size)
-            .foregroundColor(.blue)
     }
 }

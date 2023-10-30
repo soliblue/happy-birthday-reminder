@@ -1,5 +1,7 @@
+import CoreData
 import Contacts
-import ContactsUI  // Needed for CNContactViewController.descriptorForRequiredKeys()
+import ContactsUI
+
 
 class ContactService {
     private let store = CNContactStore()
@@ -19,17 +21,46 @@ class ContactService {
     }
     
     func fetchContacts(completion: @escaping ([CNContact]) -> Void) {
-        let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
-        let keysToFetch: [CNKeyDescriptor] = [requiredKeys]
-        let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
-        do {
-            let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-            completion(contacts)
-        } catch {
-            print("Failed to fetch contacts:", error)
-            completion([])
+            let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
+            let keysToFetch: [CNKeyDescriptor] = [requiredKeys]
+            let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
+            do {
+                let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
+                
+                // Linking with CoreData
+                let context = CoreDataStack.shared.context
+                for cnContact in contacts {
+                    let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+                    fetchRequest.predicate = NSPredicate(format: "identifier = %@", cnContact.identifier)
+                    do {
+                        let matchingContacts = try context.fetch(fetchRequest)
+                        if let coreDataContact = matchingContacts.first {
+                            // Link existing CoreData contact to CNContact
+                            cnContact.coreData = coreDataContact
+                        } else {
+                            // Create new CoreData contact and link it to CNContact
+                            let newContact = Contact(context: context)
+                            newContact.identifier = cnContact.identifier
+                            newContact.isFavorite = false
+                            cnContact.coreData = newContact
+                        }
+                    } catch {
+                        print("Error fetching CoreData Contact:", error)
+                    }
+                }
+                // Save changes to CoreData
+                do {
+                    try context.save()
+                } catch {
+                    print("Error saving context:", error)
+                }
+
+                completion(contacts)
+            } catch {
+                print("Failed to fetch contacts:", error)
+                completion([])
+            }
         }
-    }
 
     
     func updateBirthday(for contact: CNContact, with date: Date, completion: @escaping (Bool) -> Void) {
@@ -66,5 +97,30 @@ class ContactService {
             completion(false)
         }
     }
+    
+    func toggleIsFavorite(for contact: CNContact, completion: @escaping (Bool) -> Void) {
+        let context = CoreDataStack.shared.context
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "identifier = %@", contact.identifier)
+        
+        do {
+            let matchingContacts = try context.fetch(fetchRequest)
+            if let coreDataContact = matchingContacts.first {
+                // Toggle isFavorite property
+                coreDataContact.isFavorite.toggle()
+                
+                // Save changes to CoreData
+                try context.save()
+                completion(true)
+            } else {
+                print("No matching CoreData contact found for identifier: \(contact.identifier)")
+                completion(false)
+            }
+        } catch {
+            print("Error toggling favorite status or saving context:", error)
+            completion(false)
+        }
+    }
+
 
 }

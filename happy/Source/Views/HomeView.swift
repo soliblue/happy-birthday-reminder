@@ -40,6 +40,6 @@ struct HomeView: View {
                     })
                 }
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

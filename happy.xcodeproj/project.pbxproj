@@ -15,7 +15,7 @@
 		FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */; };
 		FB5358582AEB94570047A61F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358572AEB94570047A61F /* NotificationService.swift */; };
 		FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585D2AEC2F740047A61F /* SearchBar.swift */; };
-		FB5358602AECD9900047A61F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* Contact.swift */; };
+		FB5358602AECD9900047A61F /* CNContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContact.swift */; };
 		FB7A70EE2AE68AAB009874C8 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* Main.swift */; };
 		FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F12AE68AAD009874C8 /* Assets.xcassets */; };
 		FB7A71052AE68AAD009874C8 /* happyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71042AE68AAD009874C8 /* happyTests.swift */; };
@@ -27,6 +27,9 @@
 		FBADC52B2AED12DB00C3A546 /* ContactListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */; };
 		FBADC52D2AED213600C3A546 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52C2AED213600C3A546 /* ShareSheet.swift */; };
 		FBADC52F2AED411F00C3A546 /* DatePickerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52E2AED411F00C3A546 /* DatePickerModal.swift */; };
+		FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */; };
+		FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */; };
+		FBADC5362AEF03E200C3A546 /* ContactListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,7 @@
 		FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayIcon.swift; sourceTree = "<group>"; };
 		FB5358572AEB94570047A61F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FB53585D2AEC2F740047A61F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		FB53585F2AECD9900047A61F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		FB53585F2AECD9900047A61F /* CNContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNContact.swift; sourceTree = "<group>"; };
 		FB7A70EA2AE68AAB009874C8 /* happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7A70ED2AE68AAB009874C8 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		FB7A70F12AE68AAD009874C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCardView.swift; sourceTree = "<group>"; };
 		FBADC52C2AED213600C3A546 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		FBADC52E2AED411F00C3A546 /* DatePickerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerModal.swift; sourceTree = "<group>"; };
+		FBADC5312AEE7B4700C3A546 /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListEmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +166,9 @@
 				FB7A70F12AE68AAD009874C8 /* Assets.xcassets */,
 				FB5358382AE7E34F0047A61F /* Source */,
 				FB7A70ED2AE68AAB009874C8 /* Main.swift */,
+				FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */,
 				FB7A70FB2AE68AAD009874C8 /* Info.plist */,
+				FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */,
 			);
 			path = happy;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			children = (
 				FB7A71232AE68AEA009874C8 /* HomeView.swift */,
 				FB7A71272AE68B1A009874C8 /* ContactListView.swift */,
+				FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */,
 				FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */,
 				FB7A71252AE68B06009874C8 /* ContactEditView.swift */,
 				FB5358352AE7D3100047A61F /* ContactEditCardView.swift */,
@@ -197,7 +206,7 @@
 		FB7A711E2AE68ABD009874C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FB53585F2AECD9900047A61F /* Contact.swift */,
+				FB53585F2AECD9900047A61F /* CNContact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */,
 				FB5358322AE7CB680047A61F /* ContactService.swift in Sources */,
 				FBADC52D2AED213600C3A546 /* ShareSheet.swift in Sources */,
-				FB5358602AECD9900047A61F /* Contact.swift in Sources */,
+				FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */,
+				FB5358602AECD9900047A61F /* CNContact.swift in Sources */,
 				FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* ContactEditView.swift in Sources */,
@@ -367,6 +378,7 @@
 				FB5358362AE7D3100047A61F /* ContactEditCardView.swift in Sources */,
 				FB5358582AEB94570047A61F /* NotificationService.swift in Sources */,
 				FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */,
+				FBADC5362AEF03E200C3A546 /* ContactListEmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +705,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBADC5312AEE7B4700C3A546 /* AppDataModel.xcdatamodel */,
+			);
+			currentVersion = FBADC5312AEE7B4700C3A546 /* AppDataModel.xcdatamodel */;
+			path = AppDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB7A70E22AE68AAB009874C8 /* Project object */;
 }

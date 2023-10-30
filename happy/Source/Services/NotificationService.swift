@@ -13,10 +13,29 @@ class NotificationService {
         }
     }
     
-    func removeAllNotifications(with identifier: String, completion: @escaping () -> Void) {
+    func countNotifications(with categoryIdentifier: String, completion: @escaping (Int) -> Void) {
         requestAccessAndExecute {
             self.center.getPendingNotificationRequests { requests in
-                let identifiersToRemove = requests.filter { $0.content.categoryIdentifier == identifier }.map { $0.identifier }
+                let count = requests.filter { $0.content.categoryIdentifier == categoryIdentifier }.count
+                completion(count)
+            }
+        }
+    }
+    
+        
+    func getNotifications(with categoryIdentifier: String, completion: @escaping ([UNNotificationRequest]) -> Void) {
+        requestAccessAndExecute {
+            self.center.getPendingNotificationRequests { requests in
+                let filteredRequests = requests.filter { $0.content.categoryIdentifier == categoryIdentifier }
+                completion(filteredRequests)
+            }
+        }
+    }
+    
+    func removeAllNotifications(with categoryIdentifier: String, completion: @escaping () -> Void) {
+        requestAccessAndExecute {
+            self.center.getPendingNotificationRequests { requests in
+                let identifiersToRemove = requests.filter { $0.content.categoryIdentifier == categoryIdentifier }.map { $0.identifier }
                 self.center.removePendingNotificationRequests(withIdentifiers: identifiersToRemove)
                 completion()
             }

@@ -7,35 +7,7 @@ struct ContactListView: View {
     var body: some View {
         ZStack {
             if viewModel.accessDenied {
-                // This is your special view for an empty list
-                VStack(spacing:25) {
-                    VStack(spacing: 5){
-                        Image(systemName: "person.crop.circle.badge.xmark")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                        Text("No Contacts Found").font(.headline)
-                        Text("Please allow access to your contacts").font(.subheadline)
-                    }
-                    
-                    
-                    VStack(spacing:5){
-                        Button("Enable Access") {
-                            if let url = URL(string: UIApplication.openSettingsURLString),
-                               UIApplication.shared.canOpenURL(url) {
-                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                            }
-                        }
-                        
-                        Text("Your data remains on this device.")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                    }
-                    
-                }
-                
-                
+                ContactListEmptyView()
             } else {
                 let currentMonth = Calendar.current.component(.month, from: Date())
                 let sortedKeys = Array(viewModel.monthSections.keys).sorted {
@@ -72,6 +44,8 @@ struct ContactListView: View {
                             .id(monthInfo.name)
                         }
                     }
+                    .padding(.top,1)
+                    .listStyle(PlainListStyle())
                     .animation(.easeInOut(duration: 1.0), value: collapsedMonths)
                     .refreshable {
                         viewModel.fetchContacts()

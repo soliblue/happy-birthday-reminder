@@ -30,7 +30,6 @@ struct ContactEditCardView: View {
                 .truncationMode(.tail)
             Spacer()
             if isDatePickerShown {
-                
                 // Show date picker for updating the birthdate if necessary
                 DatePicker("", selection: $selectedDate, displayedComponents: .date)
                     .datePickerStyle(CompactDatePickerStyle())
