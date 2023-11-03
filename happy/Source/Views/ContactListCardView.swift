@@ -20,14 +20,25 @@ struct ContactListCardView: View {
             _selectedDate = State(initialValue: Date())
         }
     }
-       
+    
     var body: some View {
         HStack{
+            if let birthday = contact.birthday, let birthDate = Calendar.current.date(from: birthday) {
+                Text(String(format: "%02d", Calendar.current.component(.day, from: birthDate)))
+                    .font(.title2)
+                    .padding(.trailing, 10)
+                
+            }
+            
+            
+            
             Avatar(imageData: contact.thumbnailImageData, size: 45)
+//                .blur(radius: 5)
             VStack(alignment: .leading) {
-                Text(contact.givenName)
+                Text(contact.name)
                     .font(.headline)
                     .lineLimit(1)
+//                    .blur(radius: ["Jeffry","Whitney","Ahmed",].contains(contact.givenName) ? 0 : 5)
                 if let age = contact.age {
                     Text("\(age) years old").font(.subheadline)
                 }
@@ -47,9 +58,11 @@ struct ContactListCardView: View {
                     if let nextBirthdayString = contact.nextBirthday?.relativeString {
                         Text(nextBirthdayString).font(.caption)
                     }
-                    
+                    if let birthday = contact.birthday, let birthDate = Calendar.current.date(from: birthday) {
+                        Text(String(format: "%04d", Calendar.current.component(.year, from: birthDate))).font(.caption2)
+                    }
                 }
-               
+                
             }
         }
         .onTapGesture(count: 2) {
@@ -102,6 +115,6 @@ struct ContactListCardView: View {
                 secondaryButton: .cancel(Text("cancel"))
             )
         }
-
+        
     }
 }

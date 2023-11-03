@@ -28,6 +28,8 @@ struct ContactEditCardView: View {
                 .font(.headline)
                 .lineLimit(2)
                 .truncationMode(.tail)
+//                .blur(radius: ["Soli"].contains(contact.nickname) ? 0 : 5)
+
             Spacer()
             if isDatePickerShown {
                 // Show date picker for updating the birthdate if necessary
@@ -65,17 +67,17 @@ struct ContactEditCardView: View {
                 }){
                     Text("add birthdate").font(.callout)
                 }.buttonStyle(.bordered).foregroundColor(Color.primary)
-                    .sheet(isPresented: $isDatePickerModalShown) {
-                        DatePickerModal(isShown: $isDatePickerModalShown, selectedDate: $selectedDate) {
-                            let calendar = Calendar.current
-                            let today = calendar.startOfDay(for: Date())
-                            let selectedDay = calendar.startOfDay(for: selectedDate)
-                            if today != selectedDay {
-                                isDatePickerShown = true
-                                viewModel.updateBirthday(for: contact, with: selectedDate)
-                            }
+                .sheet(isPresented: $isDatePickerModalShown) {
+                    DatePickerModal(isShown: $isDatePickerModalShown, selectedDate: $selectedDate) {
+                        let calendar = Calendar.current
+                        let today = calendar.startOfDay(for: Date())
+                        let selectedDay = calendar.startOfDay(for: selectedDate)
+                        if today != selectedDay {
+                            isDatePickerShown = true
+                            viewModel.updateBirthday(for: contact, with: selectedDate)
                         }
                     }
+                }
             }
         }
         .padding(.vertical)

@@ -114,7 +114,7 @@ class ContactViewModel: ObservableObject {
             }
         }
     }
-    
+        
     func scheduleUpcomingBirthdays(for contacts: [CNContact]) {
         // Step 1: Remove all existing birthday notifications
         notificationsService.removeAllNotifications(with: ContactViewModel.birthdayNotificationIdentifier) {

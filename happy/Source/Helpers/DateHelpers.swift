@@ -16,10 +16,14 @@ extension Date {
     }
     
     var relativeString: String {
+        let calendar = Calendar.current
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .full
-        return formatter.localizedString(for: self, relativeTo: Date())
+        let dayDifference = calendar.dateComponents([.day], from: Date(), to: self).day ?? 0
+        let adjustedDate = dayDifference > 0 ? calendar.date(byAdding: .day, value: 1, to: self) ?? self : self
+        return formatter.localizedString(for: adjustedDate, relativeTo: Date())
     }
+
     
     var month: String {
         let formatter = DateFormatter()

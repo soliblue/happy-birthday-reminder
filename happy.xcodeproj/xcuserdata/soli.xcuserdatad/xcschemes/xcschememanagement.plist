@@ -9,6 +9,36 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>happyWidgetsExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FB4731FC2AF388E0003604D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB7A70E92AE68AAB009874C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB7A70FF2AE68AAD009874C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB7A71092AE68AAD009874C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

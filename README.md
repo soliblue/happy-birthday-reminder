@@ -6,11 +6,14 @@ Develop a personalized iOS application using Swift to help myself keep track of 
 
 ## Features
 
-- **Birthday Importing** Import birthdays from phone contacts(, Facebook and email if feasible).
-- **Birthday Viewing** Get notified & view upcoming birthdays in a minimalist, clean interface.
+- [x] **Birthday Viewing** Get notified & view upcoming birthdays in a minimalist, clean interface.
+- [x] **Birthday Wishes** Pre-loaded or custom message templates for sending birthday wishes.
+- [x] **Birthday Importing** Import birthdays from phone contacts
+- [x] **Birthday Management** Update existing birthdays with an intuitive UI
+- **Apple Watch Wallpaper** Show initials or profile pics on hour titles for upcoming birthdays
 - **Birthday Sharing** Share a link to your profile; friends can choose to share their birthdays with you, which will then be automatically added to your calendar.
-- **Birthday Wishes** Pre-loaded or custom message templates for sending birthday wishes.
 - **Widget** A home screen widget displaying the next upcoming birthday.
+
 
 ## Competitive Edge
 

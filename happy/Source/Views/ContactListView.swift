@@ -56,16 +56,3 @@ struct ContactListView: View {
         }
     }
 }
-
-private func scrollToCurrentMonth(using proxy: ScrollViewProxy) {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "MMMM"
-    let currentMonth = dateFormatter.string(from: Date())
-    
-    withAnimation {
-        proxy.scrollTo(currentMonth, anchor: .top)
-    }
-}
-
-
-
