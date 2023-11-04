@@ -1,23 +1,6 @@
-
 import Contacts
-import CoreData
-
 
 extension CNContact {
-    
-    private struct AssociatedKeys {
-        static var coreDataKey = "coreDataKey"
-    }
-    
-    var coreData: Contact? {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.coreDataKey) as? Contact
-        }
-        set(newValue) {
-            objc_setAssociatedObject(self, &AssociatedKeys.coreDataKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-        
     var age: Int? {
         guard let birthdateDate = self.birthday?.date else {
             return nil
@@ -33,6 +16,16 @@ extension CNContact {
         }
     }
     
+    var shortName: String {
+        if !self.nickname.isEmpty {
+            return self.nickname
+        } else if !self.givenName.isEmpty {
+            return self.givenName
+        } else {
+            return self.familyName
+        }
+    }
+    
     var name: String {
         if !self.nickname.isEmpty {
             return self.nickname
@@ -40,8 +33,8 @@ extension CNContact {
             return "\(self.givenName) \(self.familyName)"
         }
     }
-
-   
+    
+    
     func hasBirthday() -> Bool {
         guard let birthdayComponents = self.birthday else {
             return false
@@ -80,6 +73,6 @@ extension CNContact {
         
         return calendar.date(byAdding: .year, value: 1, to: thisYearsBirthday)!
     }
-
+    
     
 }

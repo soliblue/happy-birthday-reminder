@@ -84,17 +84,6 @@ class ContactViewModel: ObservableObject {
             }
         }
     }
-    
-    func toggleIsFavorite(for contact: CNContact) {
-        contactsService.toggleIsFavorite(for: contact) { success in
-            if success {
-                print("Toggled favorite status successfully.")
-                self.fetchContacts()
-            } else {
-                print("Failed to toggle favorite status.")
-            }
-        }
-    }
 
     
     func filteredContacts() -> [CNContact] {

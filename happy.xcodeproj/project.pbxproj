@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		FB4732002AF388E0003604D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4731FF2AF388E0003604D2 /* WidgetKit.framework */; };
 		FB4732022AF388E0003604D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4732012AF388E0003604D2 /* SwiftUI.framework */; };
-		FB4732052AF388E0003604D2 /* happyWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732042AF388E0003604D2 /* happyWidgetsBundle.swift */; };
-		FB4732092AF388E0003604D2 /* ListUpcomingBirthdaysWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732082AF388E0003604D2 /* ListUpcomingBirthdaysWidget.swift */; };
+		FB4732052AF388E0003604D2 /* WidgetMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732042AF388E0003604D2 /* WidgetMain.swift */; };
 		FB47320C2AF388E1003604D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB47320B2AF388E1003604D2 /* Assets.xcassets */; };
 		FB47320E2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */; };
 		FB47320F2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */; };
-		FB4732122AF388E1003604D2 /* happyWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB4731FD2AF388E0003604D2 /* happyWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB4732122AF388E1003604D2 /* happyWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB4731FD2AF388E0003604D2 /* happyWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FB4732182AF5763F003604D2 /* ContactEditEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */; };
+		FB47321F2AF61ADB003604D2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtensions.swift */; };
+		FB4732202AF61B0A003604D2 /* CNContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContactExtension.swift */; };
+		FB4732222AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */; };
+		FB4732232AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */; };
+		FB4732242AF61D3C003604D2 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* Avatar.swift */; };
+		FB4732252AF61D3E003604D2 /* BirthdayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */; };
+		FB4732262AF62141003604D2 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
+		FB4732282AF62214003604D2 /* WidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732272AF62214003604D2 /* WidgetProvider.swift */; };
+		FB47322A2AF622BD003604D2 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732292AF622BD003604D2 /* WidgetView.swift */; };
 		FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* Avatar.swift */; };
-		FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateHelpers.swift */; };
+		FB53582C2AE6E32E0047A61F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtensions.swift */; };
 		FB5358322AE7CB680047A61F /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
 		FB5358342AE7D1040047A61F /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358332AE7D1040047A61F /* ContactViewModel.swift */; };
 		FB5358362AE7D3100047A61F /* ContactEditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358352AE7D3100047A61F /* ContactEditCardView.swift */; };
 		FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */; };
 		FB5358582AEB94570047A61F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358572AEB94570047A61F /* NotificationService.swift */; };
 		FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585D2AEC2F740047A61F /* SearchBar.swift */; };
-		FB5358602AECD9900047A61F /* CNContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContact.swift */; };
-		FB7A70EE2AE68AAB009874C8 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* Main.swift */; };
+		FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContactExtension.swift */; };
+		FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* AppMain.swift */; };
 		FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F12AE68AAD009874C8 /* Assets.xcassets */; };
 		FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* HomeView.swift */; };
 		FB7A71262AE68B06009874C8 /* ContactEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71252AE68B06009874C8 /* ContactEditView.swift */; };
@@ -46,20 +54,6 @@
 			remoteGlobalIDString = FB4731FC2AF388E0003604D2;
 			remoteInfo = happyWidgetsExtension;
 		};
-		FB7A71012AE68AAD009874C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB7A70E22AE68AAB009874C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB7A70E92AE68AAB009874C8;
-			remoteInfo = happy;
-		};
-		FB7A710B2AE68AAD009874C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB7A70E22AE68AAB009874C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB7A70E92AE68AAB009874C8;
-			remoteInfo = happy;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FB4732122AF388E1003604D2 /* happyWidgetsExtension.appex in Embed Foundation Extensions */,
+				FB4732122AF388E1003604D2 /* happyWidgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,17 +71,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FB4731FD2AF388E0003604D2 /* happyWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = happyWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4731FD2AF388E0003604D2 /* happyWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = happyWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4731FF2AF388E0003604D2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FB4732012AF388E0003604D2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		FB4732042AF388E0003604D2 /* happyWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happyWidgetsBundle.swift; sourceTree = "<group>"; };
-		FB4732082AF388E0003604D2 /* ListUpcomingBirthdaysWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUpcomingBirthdaysWidget.swift; sourceTree = "<group>"; };
+		FB4732042AF388E0003604D2 /* WidgetMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetMain.swift; sourceTree = "<group>"; };
 		FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = happyWidgets.intentdefinition; sourceTree = "<group>"; };
 		FB47320B2AF388E1003604D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB47320D2AF388E1003604D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditEmptyView.swift; sourceTree = "<group>"; };
+		FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactListCompactCardView.swift; path = happyWidgets/ContactListCompactCardView.swift; sourceTree = SOURCE_ROOT; };
+		FB4732272AF62214003604D2 /* WidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetProvider.swift; sourceTree = "<group>"; };
+		FB4732292AF622BD003604D2 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		FB5358292AE6DC150047A61F /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
-		FB53582B2AE6E32E0047A61F /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		FB53582B2AE6E32E0047A61F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		FB5358312AE7CB680047A61F /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		FB5358332AE7D1040047A61F /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		FB5358352AE7D3100047A61F /* ContactEditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditCardView.swift; sourceTree = "<group>"; };
@@ -95,13 +91,11 @@
 		FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayIcon.swift; sourceTree = "<group>"; };
 		FB5358572AEB94570047A61F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FB53585D2AEC2F740047A61F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		FB53585F2AECD9900047A61F /* CNContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNContact.swift; sourceTree = "<group>"; };
+		FB53585F2AECD9900047A61F /* CNContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNContactExtension.swift; sourceTree = "<group>"; };
 		FB7A70EA2AE68AAB009874C8 /* happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7A70ED2AE68AAB009874C8 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FB7A70ED2AE68AAB009874C8 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		FB7A70F12AE68AAD009874C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7A70FB2AE68AAD009874C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7A71002AE68AAD009874C8 /* happyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7A710A2AE68AAD009874C8 /* happyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7A71232AE68AEA009874C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB7A71252AE68B06009874C8 /* ContactEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditView.swift; sourceTree = "<group>"; };
 		FB7A71272AE68B1A009874C8 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
@@ -130,20 +124,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB7A70FD2AE68AAD009874C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7A71072AE68AAD009874C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,8 +139,9 @@
 		FB4732032AF388E0003604D2 /* happyWidgets */ = {
 			isa = PBXGroup;
 			children = (
-				FB4732042AF388E0003604D2 /* happyWidgetsBundle.swift */,
-				FB4732082AF388E0003604D2 /* ListUpcomingBirthdaysWidget.swift */,
+				FB4732042AF388E0003604D2 /* WidgetMain.swift */,
+				FB4732292AF622BD003604D2 /* WidgetView.swift */,
+				FB4732272AF62214003604D2 /* WidgetProvider.swift */,
 				FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */,
 				FB47320B2AF388E1003604D2 /* Assets.xcassets */,
 				FB47320D2AF388E1003604D2 /* Info.plist */,
@@ -184,11 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				FB7A711D2AE68AB7009874C8 /* Views */,
-				FB7A711E2AE68ABD009874C8 /* Models */,
-				FB7A71202AE68AC6009874C8 /* Helpers */,
+				FB53582D2AE6E63D0047A61F /* Components */,
+				FB7A71202AE68AC6009874C8 /* Extensions */,
 				FB5358392AE7E3FF0047A61F /* Services */,
 				FB7A711F2AE68AC1009874C8 /* ViewModels */,
-				FB53582D2AE6E63D0047A61F /* Components */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -217,9 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FB7A70EA2AE68AAB009874C8 /* happy.app */,
-				FB7A71002AE68AAD009874C8 /* happyTests.xctest */,
-				FB7A710A2AE68AAD009874C8 /* happyUITests.xctest */,
-				FB4731FD2AF388E0003604D2 /* happyWidgetsExtension.appex */,
+				FB4731FD2AF388E0003604D2 /* happyWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,7 +207,7 @@
 			children = (
 				FB7A70F12AE68AAD009874C8 /* Assets.xcassets */,
 				FB5358382AE7E34F0047A61F /* Source */,
-				FB7A70ED2AE68AAB009874C8 /* Main.swift */,
+				FB7A70ED2AE68AAB009874C8 /* AppMain.swift */,
 				FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */,
 				FB7A70FB2AE68AAD009874C8 /* Info.plist */,
 				FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */,
@@ -244,19 +222,12 @@
 				FB7A71272AE68B1A009874C8 /* ContactListView.swift */,
 				FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */,
 				FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */,
+				FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */,
 				FB7A71252AE68B06009874C8 /* ContactEditView.swift */,
 				FB5358352AE7D3100047A61F /* ContactEditCardView.swift */,
 				FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FB7A711E2AE68ABD009874C8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FB53585F2AECD9900047A61F /* CNContact.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		FB7A711F2AE68AC1009874C8 /* ViewModels */ = {
@@ -267,20 +238,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		FB7A71202AE68AC6009874C8 /* Helpers */ = {
+		FB7A71202AE68AC6009874C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FB53582B2AE6E32E0047A61F /* DateHelpers.swift */,
+				FB53585F2AECD9900047A61F /* CNContactExtension.swift */,
+				FB53582B2AE6E32E0047A61F /* DateExtensions.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB4731FC2AF388E0003604D2 /* happyWidgetsExtension */ = {
+		FB4731FC2AF388E0003604D2 /* happyWidgets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB4732132AF388E1003604D2 /* Build configuration list for PBXNativeTarget "happyWidgetsExtension" */;
+			buildConfigurationList = FB4732132AF388E1003604D2 /* Build configuration list for PBXNativeTarget "happyWidgets" */;
 			buildPhases = (
 				FB4731F92AF388E0003604D2 /* Sources */,
 				FB4731FA2AF388E0003604D2 /* Frameworks */,
@@ -290,9 +262,9 @@
 			);
 			dependencies = (
 			);
-			name = happyWidgetsExtension;
+			name = happyWidgets;
 			productName = happyWidgetsExtension;
-			productReference = FB4731FD2AF388E0003604D2 /* happyWidgetsExtension.appex */;
+			productReference = FB4731FD2AF388E0003604D2 /* happyWidgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		FB7A70E92AE68AAB009874C8 /* happy */ = {
@@ -316,42 +288,6 @@
 			productReference = FB7A70EA2AE68AAB009874C8 /* happy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB7A70FF2AE68AAD009874C8 /* happyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB7A71172AE68AAD009874C8 /* Build configuration list for PBXNativeTarget "happyTests" */;
-			buildPhases = (
-				FB7A70FC2AE68AAD009874C8 /* Sources */,
-				FB7A70FD2AE68AAD009874C8 /* Frameworks */,
-				FB7A70FE2AE68AAD009874C8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB7A71022AE68AAD009874C8 /* PBXTargetDependency */,
-			);
-			name = happyTests;
-			productName = happyTests;
-			productReference = FB7A71002AE68AAD009874C8 /* happyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FB7A71092AE68AAD009874C8 /* happyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB7A711A2AE68AAD009874C8 /* Build configuration list for PBXNativeTarget "happyUITests" */;
-			buildPhases = (
-				FB7A71062AE68AAD009874C8 /* Sources */,
-				FB7A71072AE68AAD009874C8 /* Frameworks */,
-				FB7A71082AE68AAD009874C8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB7A710C2AE68AAD009874C8 /* PBXTargetDependency */,
-			);
-			name = happyUITests;
-			productName = happyUITests;
-			productReference = FB7A710A2AE68AAD009874C8 /* happyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -367,14 +303,6 @@
 					};
 					FB7A70E92AE68AAB009874C8 = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					FB7A70FF2AE68AAD009874C8 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = FB7A70E92AE68AAB009874C8;
-					};
-					FB7A71092AE68AAD009874C8 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = FB7A70E92AE68AAB009874C8;
 					};
 				};
 			};
@@ -394,9 +322,7 @@
 			projectRoot = "";
 			targets = (
 				FB7A70E92AE68AAB009874C8 /* happy */,
-				FB7A70FF2AE68AAD009874C8 /* happyTests */,
-				FB7A71092AE68AAD009874C8 /* happyUITests */,
-				FB4731FC2AF388E0003604D2 /* happyWidgetsExtension */,
+				FB4731FC2AF388E0003604D2 /* happyWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -418,20 +344,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB7A70FE2AE68AAD009874C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7A71082AE68AAD009874C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -439,8 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4732092AF388E0003604D2 /* ListUpcomingBirthdaysWidget.swift in Sources */,
-				FB4732052AF388E0003604D2 /* happyWidgetsBundle.swift in Sources */,
+				FB47322A2AF622BD003604D2 /* WidgetView.swift in Sources */,
+				FB4732232AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */,
+				FB4732282AF62214003604D2 /* WidgetProvider.swift in Sources */,
+				FB4732262AF62141003604D2 /* ContactService.swift in Sources */,
+				FB47321F2AF61ADB003604D2 /* DateExtensions.swift in Sources */,
+				FB4732202AF61B0A003604D2 /* CNContactExtension.swift in Sources */,
+				FB4732242AF61D3C003604D2 /* Avatar.swift in Sources */,
+				FB4732252AF61D3E003604D2 /* BirthdayIcon.swift in Sources */,
+				FB4732052AF388E0003604D2 /* WidgetMain.swift in Sources */,
 				FB47320E2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,12 +373,12 @@
 				FBADC52D2AED213600C3A546 /* ShareSheet.swift in Sources */,
 				FB47320F2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */,
 				FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */,
-				FB5358602AECD9900047A61F /* CNContact.swift in Sources */,
-				FB53582C2AE6E32E0047A61F /* DateHelpers.swift in Sources */,
+				FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */,
+				FB53582C2AE6E32E0047A61F /* DateExtensions.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* ContactEditView.swift in Sources */,
 				FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */,
-				FB7A70EE2AE68AAB009874C8 /* Main.swift in Sources */,
+				FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */,
 				FBADC52B2AED12DB00C3A546 /* ContactListCardView.swift in Sources */,
 				FBADC52F2AED411F00C3A546 /* DatePickerModal.swift in Sources */,
 				FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */,
@@ -469,21 +388,8 @@
 				FB5358582AEB94570047A61F /* NotificationService.swift in Sources */,
 				FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */,
 				FB4732182AF5763F003604D2 /* ContactEditEmptyView.swift in Sources */,
+				FB4732222AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */,
 				FBADC5362AEF03E200C3A546 /* ContactListEmptyView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7A70FC2AE68AAD009874C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7A71062AE68AAD009874C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,18 +398,8 @@
 /* Begin PBXTargetDependency section */
 		FB47321A2AF585F9003604D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB4731FC2AF388E0003604D2 /* happyWidgetsExtension */;
+			target = FB4731FC2AF388E0003604D2 /* happyWidgets */;
 			targetProxy = FB4732192AF585F9003604D2 /* PBXContainerItemProxy */;
-		};
-		FB7A71022AE68AAD009874C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB7A70E92AE68AAB009874C8 /* happy */;
-			targetProxy = FB7A71012AE68AAD009874C8 /* PBXContainerItemProxy */;
-		};
-		FB7A710C2AE68AAD009874C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB7A70E92AE68AAB009874C8 /* happy */;
-			targetProxy = FB7A710B2AE68AAD009874C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -744,88 +640,10 @@
 			};
 			name = Release;
 		};
-		FB7A71182AE68AAD009874C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X52A94XDJB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = soli.happyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/happy";
-			};
-			name = Debug;
-		};
-		FB7A71192AE68AAD009874C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X52A94XDJB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = soli.happyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/happy";
-			};
-			name = Release;
-		};
-		FB7A711B2AE68AAD009874C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X52A94XDJB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = soli.happyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = happy;
-			};
-			name = Debug;
-		};
-		FB7A711C2AE68AAD009874C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X52A94XDJB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = soli.happyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = happy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB4732132AF388E1003604D2 /* Build configuration list for PBXNativeTarget "happyWidgetsExtension" */ = {
+		FB4732132AF388E1003604D2 /* Build configuration list for PBXNativeTarget "happyWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB4732142AF388E1003604D2 /* Debug */,
@@ -848,24 +666,6 @@
 			buildConfigurations = (
 				FB7A71152AE68AAD009874C8 /* Debug */,
 				FB7A71162AE68AAD009874C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB7A71172AE68AAD009874C8 /* Build configuration list for PBXNativeTarget "happyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB7A71182AE68AAD009874C8 /* Debug */,
-				FB7A71192AE68AAD009874C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB7A711A2AE68AAD009874C8 /* Build configuration list for PBXNativeTarget "happyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB7A711B2AE68AAD009874C8 /* Debug */,
-				FB7A711C2AE68AAD009874C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB4731FC2AF388E0003604D2"
-               BuildableName = "happyWidgetsExtension.appex"
-               BlueprintName = "happyWidgetsExtension"
+               BuildableName = "happyWidgets.appex"
+               BlueprintName = "happyWidgets"
                ReferencedContainer = "container:happy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB4731FC2AF388E0003604D2"
-            BuildableName = "happyWidgetsExtension.appex"
-            BlueprintName = "happyWidgetsExtension"
+            BuildableName = "happyWidgets.appex"
+            BlueprintName = "happyWidgets"
             ReferencedContainer = "container:happy.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>

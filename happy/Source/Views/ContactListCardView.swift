@@ -65,9 +65,6 @@ struct ContactListCardView: View {
                 
             }
         }
-        .onTapGesture(count: 2) {
-            viewModel.toggleIsFavorite(for: contact)
-        }
         .onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
