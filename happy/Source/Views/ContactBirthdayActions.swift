@@ -18,18 +18,17 @@ struct ContactBirthdayActions: View {
         }
         .actionSheet(isPresented: $showingActionSheet) {
             ActionSheet(
-                title: Text("Contact Options"),
-                message: Text("Wish \(contact.givenName) a happy birthday!"),
+                title: Text("wish \(contact.name) a happy birthday"),
                 buttons: [
-                    .default(Text("Send Text")) {
+                    .default(Text("send text")) {
                         self.isShowingMessageComposer = true
                     },
-                    .default(Text("Make a Call")) {
+                    .default(Text("make a call")) {
                         if let url = URL(string: "tel://\(contact.phoneNumbers.first?.value.stringValue ?? "")"), UIApplication.shared.canOpenURL(url) {
                             UIApplication.shared.open(url)
                         }
                     },
-                    .cancel(Text("Cancel"))
+                    .destructive(Text("cancel"))
                 ]
             )
         }

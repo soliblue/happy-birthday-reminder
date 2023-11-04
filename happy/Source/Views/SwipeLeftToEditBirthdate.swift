@@ -5,8 +5,18 @@ struct SwipeLeftToEditBirthdate: ViewModifier {
     var contact: CNContact
     var viewModel: ContactViewModel
 
-    @State private var selectedDate: Date = Date()
+    @State private var selectedDate: Date
     @State private var showDatePickerSheet: Bool = false
+    
+    init(contact: CNContact, viewModel: ContactViewModel) {
+        self.contact = contact
+        self.viewModel = viewModel
+        if let birthdate = contact.birthday?.date {
+            _selectedDate = State(initialValue: birthdate)
+        } else {
+            _selectedDate = State(initialValue: Date())
+        }
+    }
 
     func body(content: Content) -> some View {
         content
