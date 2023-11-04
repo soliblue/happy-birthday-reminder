@@ -20,51 +20,42 @@ class ContactService {
     }
     
     func fetchContacts(completion: @escaping ([CNContact]) -> Void) {
-        let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
-        let keysToFetch: [CNKeyDescriptor] = [requiredKeys]
-        let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
-        do {
-            let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-            completion(contacts)
-        } catch {
-            print("Failed to fetch contacts:", error)
-            completion([])
+        self.requestAccess { granted in
+            if granted {
+                let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
+                let keysToFetch: [CNKeyDescriptor] = [requiredKeys]
+                let predicate = CNContact.predicateForContactsInContainer(withIdentifier: self.store.defaultContainerIdentifier())
+                do {
+                    let contacts = try self.store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
+                    completion(contacts)
+                } catch {
+                    print("Failed to fetch contacts:", error)
+                    completion([])
+                }
+            }
         }
     }
     
     
-    func updateBirthday(for contact: CNContact, with date: Date, completion: @escaping (Bool) -> Void) {
-        let mutableContact = contact.mutableCopy() as! CNMutableContact
-        mutableContact.birthday = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        let saveRequest = CNSaveRequest()
-        saveRequest.update(mutableContact)
-        do {
-            try store.execute(saveRequest)
-            completion(true)
-        } catch {
-            print("Failed to save birthday:", error)
-            completion(false)
-        }
-    }
-    
-    func clearBirthday(for contact: CNContact, completion: @escaping (Bool) -> Void) {
-        // Create a mutable copy of the contact
-        let mutableContact = contact.mutableCopy() as! CNMutableContact
-        
-        // Set the birthday to nil
-        mutableContact.birthday = nil
-        
-        // Create a save request to update the contact
-        let saveRequest = CNSaveRequest()
-        saveRequest.update(mutableContact)
-        
-        do {
-            // Execute the save request
-            try store.execute(saveRequest)
-            completion(true)
-        } catch {
-            print("Failed to clear birthday:", error)
-            completion(false)
+    func updateBirthday(for contact: CNContact, with date: Date? = nil, completion: @escaping (Bool) -> Void) {
+        requestAccess { granted in
+            if granted {
+                let mutableContact = contact.mutableCopy() as! CNMutableContact
+                mutableContact.birthday = date != nil ? Calendar.current.dateComponents([.year, .month, .day], from: date!) : nil
+                
+                let saveRequest = CNSaveRequest()
+                saveRequest.update(mutableContact)
+                
+                do {
+                    try self.store.execute(saveRequest)
+                    completion(true)
+                } catch {
+                    print("Failed to update birthday:", error)
+                    completion(false)
+                }
+            } else {
+                print("Access to contacts was denied or restricted.")
+            }
         }
     }
 }

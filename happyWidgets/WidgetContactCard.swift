@@ -1,7 +1,7 @@
 import SwiftUI
 import Contacts
 
-struct ContactListCompactCardView: View {
+struct WidgetContactCard: View {
     let contact: CNContact
 
     var body: some View {

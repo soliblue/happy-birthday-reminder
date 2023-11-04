@@ -40,51 +40,23 @@ class ContactViewModel: ObservableObject {
             MonthInfo(number: Calendar.current.component(.month, from: $0.nextBirthday!), name: $0.nextBirthday!.month)
         })
     }
-
-    
     
     func fetchContacts() {
-        contactsService.requestAccess { granted in
-            if granted {
-                self.contactsService.fetchContacts { contacts in
-                    DispatchQueue.main.async {
-                        self.contacts = contacts
-                    }
-                    self.scheduleUpcomingBirthdays(for: contacts)
-
-                }
-            } else {
-                print("Access to contacts is denied or restricted")
-                self.accessDenied = true
+        self.contactsService.fetchContacts { contacts in
+            DispatchQueue.main.async {
+                self.contacts = contacts
             }
+            self.scheduleUpcomingBirthdays(for: contacts)
         }
     }
     
-    func updateBirthday(for contact: CNContact, with date: Date) {
-        contactsService.updateBirthday(for: contact, with: date) { success in
+    func updateBirthday(for contact: CNContact, with: Date? = nil) {
+        self.contactsService.updateBirthday(for: contact, with: with){ success in
             if success {
-                print("Saved birthday successfully.")
                 self.fetchContacts()
-
-            } else {
-                print("Failed to save birthday.")
             }
         }
     }
-    
-    // Add this function to your ContactViewModel class
-    func clearBirthday(for contact: CNContact) {
-        contactsService.clearBirthday(for: contact) { success in
-            if success {
-                print("Cleared birthday successfully.")
-                // Optionally, you can update the UI or refresh the contact list here
-                self.fetchContacts()
-            } else {
-                print("Failed to clear birthday.")
-            }
-        }
-    }
-
     
     func filteredContacts() -> [CNContact] {
         let searchWords = searchText.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: " ")
@@ -103,7 +75,7 @@ class ContactViewModel: ObservableObject {
             }
         }
     }
-        
+    
     func scheduleUpcomingBirthdays(for contacts: [CNContact]) {
         // Step 1: Remove all existing birthday notifications
         notificationsService.removeAllNotifications(with: ContactViewModel.birthdayNotificationIdentifier) {

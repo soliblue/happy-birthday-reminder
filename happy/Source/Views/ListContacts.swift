@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct ContactListView: View {
+struct ListContacts: View {
     @State private var collapsedMonths = Set<String>()
     @ObservedObject var viewModel = ContactViewModel()
     
     var body: some View {
         ZStack {
             if viewModel.accessDenied {
-                ContactListEmptyView()
+                AllowContactsAccess()
             } else {
                 let currentMonth = Calendar.current.component(.month, from: Date())
                 let sortedKeys = Array(viewModel.monthSections.keys).sorted {
@@ -36,7 +36,7 @@ struct ContactListView: View {
                             ) {
                                 if !collapsedMonths.contains(monthInfo.name) {
                                     ForEach(viewModel.monthSections[monthInfo] ?? [], id: \.self) { contact in
-                                        ContactListCardView(contact: contact, viewModel: viewModel)
+                                        ContactCard(contact: contact, viewModel: viewModel)
                                     }
                                     
                                 }

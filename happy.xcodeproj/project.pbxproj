@@ -14,36 +14,40 @@
 		FB47320E2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */; };
 		FB47320F2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */; };
 		FB4732122AF388E1003604D2 /* happyWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB4731FD2AF388E0003604D2 /* happyWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FB4732182AF5763F003604D2 /* ContactEditEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */; };
-		FB47321F2AF61ADB003604D2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtensions.swift */; };
+		FB4732182AF5763F003604D2 /* CreateContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732172AF5763F003604D2 /* CreateContact.swift */; };
+		FB47321F2AF61ADB003604D2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtension.swift */; };
 		FB4732202AF61B0A003604D2 /* CNContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContactExtension.swift */; };
-		FB4732222AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */; };
-		FB4732232AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */; };
+		FB4732232AF61C5F003604D2 /* WidgetContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732212AF61C5F003604D2 /* WidgetContactCard.swift */; };
 		FB4732242AF61D3C003604D2 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* Avatar.swift */; };
 		FB4732252AF61D3E003604D2 /* BirthdayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */; };
 		FB4732262AF62141003604D2 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
 		FB4732282AF62214003604D2 /* WidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732272AF62214003604D2 /* WidgetProvider.swift */; };
 		FB47322A2AF622BD003604D2 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732292AF622BD003604D2 /* WidgetView.swift */; };
+		FB47322C2AF62F69003604D2 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47322B2AF62F69003604D2 /* SendMessageButton.swift */; };
+		FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */; };
+		FB4732322AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */; };
+		FB4732342AF696FC003604D2 /* ClearBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */; };
+		FB4732362AF697B1003604D2 /* AddBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */; };
+		FB4732382AF699ED003604D2 /* EditBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732372AF699ED003604D2 /* EditBirthdateButton.swift */; };
+		FB47323C2AF6A54E003604D2 /* ContactBirthdayActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */; };
 		FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* Avatar.swift */; };
-		FB53582C2AE6E32E0047A61F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtensions.swift */; };
+		FB53582C2AE6E32E0047A61F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtension.swift */; };
 		FB5358322AE7CB680047A61F /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
 		FB5358342AE7D1040047A61F /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358332AE7D1040047A61F /* ContactViewModel.swift */; };
-		FB5358362AE7D3100047A61F /* ContactEditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358352AE7D3100047A61F /* ContactEditCardView.swift */; };
+		FB5358362AE7D3100047A61F /* ContactCompactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358352AE7D3100047A61F /* ContactCompactCard.swift */; };
 		FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */; };
 		FB5358582AEB94570047A61F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358572AEB94570047A61F /* NotificationService.swift */; };
 		FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585D2AEC2F740047A61F /* SearchBar.swift */; };
 		FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContactExtension.swift */; };
 		FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* AppMain.swift */; };
 		FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F12AE68AAD009874C8 /* Assets.xcassets */; };
-		FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* HomeView.swift */; };
-		FB7A71262AE68B06009874C8 /* ContactEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71252AE68B06009874C8 /* ContactEditView.swift */; };
-		FB7A71282AE68B1A009874C8 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71272AE68B1A009874C8 /* ContactListView.swift */; };
-		FBADC52B2AED12DB00C3A546 /* ContactListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */; };
-		FBADC52D2AED213600C3A546 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52C2AED213600C3A546 /* ShareSheet.swift */; };
-		FBADC52F2AED411F00C3A546 /* DatePickerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52E2AED411F00C3A546 /* DatePickerModal.swift */; };
+		FB7A71242AE68AEA009874C8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* Home.swift */; };
+		FB7A71262AE68B06009874C8 /* EditContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71252AE68B06009874C8 /* EditContacts.swift */; };
+		FB7A71282AE68B1A009874C8 /* ListContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71272AE68B1A009874C8 /* ListContacts.swift */; };
+		FBADC52B2AED12DB00C3A546 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC52A2AED12DB00C3A546 /* ContactCard.swift */; };
 		FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */; };
 		FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */; };
-		FBADC5362AEF03E200C3A546 /* ContactListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */; };
+		FBADC5362AEF03E200C3A546 /* AllowContactsAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,15 +82,22 @@
 		FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = happyWidgets.intentdefinition; sourceTree = "<group>"; };
 		FB47320B2AF388E1003604D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB47320D2AF388E1003604D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditEmptyView.swift; sourceTree = "<group>"; };
-		FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactListCompactCardView.swift; path = happyWidgets/ContactListCompactCardView.swift; sourceTree = SOURCE_ROOT; };
+		FB4732172AF5763F003604D2 /* CreateContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContact.swift; sourceTree = "<group>"; };
+		FB4732212AF61C5F003604D2 /* WidgetContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WidgetContactCard.swift; path = happyWidgets/WidgetContactCard.swift; sourceTree = SOURCE_ROOT; };
 		FB4732272AF62214003604D2 /* WidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetProvider.swift; sourceTree = "<group>"; };
 		FB4732292AF622BD003604D2 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		FB47322B2AF62F69003604D2 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
+		FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRightToClearBirthdate.swift; sourceTree = "<group>"; };
+		FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeLeftToEditBirthdate.swift; sourceTree = "<group>"; };
+		FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBirthdateButton.swift; sourceTree = "<group>"; };
+		FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdateButton.swift; sourceTree = "<group>"; };
+		FB4732372AF699ED003604D2 /* EditBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBirthdateButton.swift; sourceTree = "<group>"; };
+		FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBirthdayActions.swift; sourceTree = "<group>"; };
 		FB5358292AE6DC150047A61F /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
-		FB53582B2AE6E32E0047A61F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		FB53582B2AE6E32E0047A61F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FB5358312AE7CB680047A61F /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		FB5358332AE7D1040047A61F /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
-		FB5358352AE7D3100047A61F /* ContactEditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditCardView.swift; sourceTree = "<group>"; };
+		FB5358352AE7D3100047A61F /* ContactCompactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCompactCard.swift; sourceTree = "<group>"; };
 		FB5358372AE7DF1A0047A61F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayIcon.swift; sourceTree = "<group>"; };
 		FB5358572AEB94570047A61F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -96,15 +107,13 @@
 		FB7A70ED2AE68AAB009874C8 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		FB7A70F12AE68AAD009874C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7A70FB2AE68AAD009874C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7A71232AE68AEA009874C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		FB7A71252AE68B06009874C8 /* ContactEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditView.swift; sourceTree = "<group>"; };
-		FB7A71272AE68B1A009874C8 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
-		FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCardView.swift; sourceTree = "<group>"; };
-		FBADC52C2AED213600C3A546 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
-		FBADC52E2AED411F00C3A546 /* DatePickerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerModal.swift; sourceTree = "<group>"; };
+		FB7A71232AE68AEA009874C8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		FB7A71252AE68B06009874C8 /* EditContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContacts.swift; sourceTree = "<group>"; };
+		FB7A71272AE68B1A009874C8 /* ListContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContacts.swift; sourceTree = "<group>"; };
+		FBADC52A2AED12DB00C3A546 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
 		FBADC5312AEE7B4700C3A546 /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListEmptyView.swift; sourceTree = "<group>"; };
+		FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowContactsAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 				FB4732042AF388E0003604D2 /* WidgetMain.swift */,
 				FB4732292AF622BD003604D2 /* WidgetView.swift */,
 				FB4732272AF62214003604D2 /* WidgetProvider.swift */,
+				FB4732212AF61C5F003604D2 /* WidgetContactCard.swift */,
 				FB47320A2AF388E0003604D2 /* happyWidgets.intentdefinition */,
 				FB47320B2AF388E1003604D2 /* Assets.xcassets */,
 				FB47320D2AF388E1003604D2 /* Info.plist */,
@@ -153,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				FB5358292AE6DC150047A61F /* Avatar.swift */,
-				FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */,
 				FB53585D2AEC2F740047A61F /* SearchBar.swift */,
-				FBADC52C2AED213600C3A546 /* ShareSheet.swift */,
-				FBADC52E2AED411F00C3A546 /* DatePickerModal.swift */,
+				FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */,
+				FB47322B2AF62F69003604D2 /* SendMessageButton.swift */,
+				FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,14 +228,18 @@
 		FB7A711D2AE68AB7009874C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FB7A71232AE68AEA009874C8 /* HomeView.swift */,
-				FB7A71272AE68B1A009874C8 /* ContactListView.swift */,
-				FBADC5352AEF03E200C3A546 /* ContactListEmptyView.swift */,
-				FBADC52A2AED12DB00C3A546 /* ContactListCardView.swift */,
-				FB4732212AF61C5F003604D2 /* ContactListCompactCardView.swift */,
-				FB7A71252AE68B06009874C8 /* ContactEditView.swift */,
-				FB5358352AE7D3100047A61F /* ContactEditCardView.swift */,
-				FB4732172AF5763F003604D2 /* ContactEditEmptyView.swift */,
+				FB7A71232AE68AEA009874C8 /* Home.swift */,
+				FB7A71272AE68B1A009874C8 /* ListContacts.swift */,
+				FB7A71252AE68B06009874C8 /* EditContacts.swift */,
+				FB4732172AF5763F003604D2 /* CreateContact.swift */,
+				FBADC52A2AED12DB00C3A546 /* ContactCard.swift */,
+				FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */,
+				FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */,
+				FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */,
+				FB5358352AE7D3100047A61F /* ContactCompactCard.swift */,
+				FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */,
+				FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */,
+				FB4732372AF699ED003604D2 /* EditBirthdateButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				FB53585F2AECD9900047A61F /* CNContactExtension.swift */,
-				FB53582B2AE6E32E0047A61F /* DateExtensions.swift */,
+				FB53582B2AE6E32E0047A61F /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,10 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB47322A2AF622BD003604D2 /* WidgetView.swift in Sources */,
-				FB4732232AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */,
+				FB4732232AF61C5F003604D2 /* WidgetContactCard.swift in Sources */,
 				FB4732282AF62214003604D2 /* WidgetProvider.swift in Sources */,
 				FB4732262AF62141003604D2 /* ContactService.swift in Sources */,
-				FB47321F2AF61ADB003604D2 /* DateExtensions.swift in Sources */,
+				FB47321F2AF61ADB003604D2 /* DateExtension.swift in Sources */,
 				FB4732202AF61B0A003604D2 /* CNContactExtension.swift in Sources */,
 				FB4732242AF61D3C003604D2 /* Avatar.swift in Sources */,
 				FB4732252AF61D3E003604D2 /* BirthdayIcon.swift in Sources */,
@@ -368,28 +382,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB47323C2AF6A54E003604D2 /* ContactBirthdayActions.swift in Sources */,
 				FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */,
 				FB5358322AE7CB680047A61F /* ContactService.swift in Sources */,
-				FBADC52D2AED213600C3A546 /* ShareSheet.swift in Sources */,
 				FB47320F2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */,
 				FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */,
+				FB4732322AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift in Sources */,
 				FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */,
-				FB53582C2AE6E32E0047A61F /* DateExtensions.swift in Sources */,
+				FB53582C2AE6E32E0047A61F /* DateExtension.swift in Sources */,
+				FB4732342AF696FC003604D2 /* ClearBirthdateButton.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
-				FB7A71262AE68B06009874C8 /* ContactEditView.swift in Sources */,
-				FB7A71242AE68AEA009874C8 /* HomeView.swift in Sources */,
+				FB7A71262AE68B06009874C8 /* EditContacts.swift in Sources */,
+				FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */,
+				FB4732362AF697B1003604D2 /* AddBirthdateButton.swift in Sources */,
+				FB7A71242AE68AEA009874C8 /* Home.swift in Sources */,
 				FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */,
-				FBADC52B2AED12DB00C3A546 /* ContactListCardView.swift in Sources */,
-				FBADC52F2AED411F00C3A546 /* DatePickerModal.swift in Sources */,
+				FBADC52B2AED12DB00C3A546 /* ContactCard.swift in Sources */,
 				FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */,
-				FB7A71282AE68B1A009874C8 /* ContactListView.swift in Sources */,
+				FB47322C2AF62F69003604D2 /* SendMessageButton.swift in Sources */,
+				FB7A71282AE68B1A009874C8 /* ListContacts.swift in Sources */,
 				FB5358342AE7D1040047A61F /* ContactViewModel.swift in Sources */,
-				FB5358362AE7D3100047A61F /* ContactEditCardView.swift in Sources */,
+				FB5358362AE7D3100047A61F /* ContactCompactCard.swift in Sources */,
 				FB5358582AEB94570047A61F /* NotificationService.swift in Sources */,
 				FB53584F2AE9C9D90047A61F /* BirthdayIcon.swift in Sources */,
-				FB4732182AF5763F003604D2 /* ContactEditEmptyView.swift in Sources */,
-				FB4732222AF61C5F003604D2 /* ContactListCompactCardView.swift in Sources */,
-				FBADC5362AEF03E200C3A546 /* ContactListEmptyView.swift in Sources */,
+				FB4732182AF5763F003604D2 /* CreateContact.swift in Sources */,
+				FBADC5362AEF03E200C3A546 /* AllowContactsAccess.swift in Sources */,
+				FB4732382AF699ED003604D2 /* EditBirthdateButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

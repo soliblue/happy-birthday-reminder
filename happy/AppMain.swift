@@ -4,7 +4,7 @@ import SwiftUI
 struct AppMain: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            Home()
                 .environment(\.managedObjectContext, CoreDataStack.shared.context)
         }
     }

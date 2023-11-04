@@ -41,3 +41,7 @@ We will use SwiftUI to ensure we get the most out of the iOS ecosystem. This app
 
 - Use PascalCase for file names and folder names (e.g., `AvatarView.swift`, `Components`).
 - Name files and folders descriptively to reflect their purpose within the app (e.g., `DateHelpers.swift` for helper functions related to date formatting).
+
+#### Random Opinions 
+
+I am re-writing some of the views as an educational challenge to get even more familiar with SwiftUI and the different ways to achieve the same thing. I noticed that the code is full with if conditions. I hate if conditions. I believe that if conditions are nothing but bad code. As a disciplinary measure I am thinking of having a rule that each view can have a maximum of one if condition since the code remains readable. If it needs more than one then it has to wrap in another view. 

@@ -1,7 +1,7 @@
 import ContactsUI
 import SwiftUI
 
-struct ContactEditEmptyView: View {
+struct CreateContact: View {
     var viewModel: ContactViewModel
     @State private var isShowingContactView = false
     
@@ -39,22 +39,17 @@ struct CNContactViewControllerWrapper: UIViewControllerRepresentable {
         let nav = UINavigationController(rootViewController: contactVC)
         return nav
     }
-    
-    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-        // Update the UI if needed
-    }
-    
+
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
+
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
+
     class Coordinator: NSObject, CNContactViewControllerDelegate {
         var parent: CNContactViewControllerWrapper
-        
         init(_ parent: CNContactViewControllerWrapper) {
             self.parent = parent
         }
-        
-        // Implement the delegate methods if needed
     }
 }

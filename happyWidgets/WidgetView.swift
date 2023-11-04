@@ -13,7 +13,7 @@ struct BirthdayWidgetEntryView: View {
     var body: some View {
         VStack(spacing: 10) {
             ForEach(Array(entry.upcomingBirthdays.prefix(3).enumerated()), id: \.element.identifier) { index, contact in
-                ContactListCompactCardView(contact: contact)
+                WidgetContactCard(contact: contact)
                 if index < 2 {
                     Divider()
                 }

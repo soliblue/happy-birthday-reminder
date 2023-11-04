@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct HomeView: View {
+struct Home: View {
     @State private var isShowingCreateView = false
     var body: some View {
         NavigationView {
             ZStack {
-                ContactListView()
+                ListContacts()
                 VStack {
                     Spacer()
                     HStack {
@@ -33,7 +33,7 @@ struct HomeView: View {
             .sheet(isPresented: $isShowingCreateView) {
                 NavigationView {
                     VStack {
-                        ContactEditView()
+                        EditContacts()
                     }
                     .navigationBarItems(trailing: Button("close") {
                         isShowingCreateView = false
