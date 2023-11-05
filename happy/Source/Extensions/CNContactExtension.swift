@@ -1,20 +1,6 @@
 import Contacts
 
 extension CNContact {
-    var age: Int? {
-        guard let birthdateDate = self.birthday?.date else {
-            return nil
-        }
-        
-        let calendar = Calendar.current
-        let now = Date()
-        let ageComponents = calendar.dateComponents([.year], from: birthdateDate, to: now)
-        if let ageValue = ageComponents.year, ageValue > 0, ageValue <= 150 {
-            return ageValue
-        } else {
-            return nil
-        }
-    }
     
     var shortName: String {
         if !self.nickname.isEmpty {
@@ -33,20 +19,8 @@ extension CNContact {
             return "\(self.givenName) \(self.familyName)"
         }
     }
-    
-    
-    func hasBirthday() -> Bool {
-        guard let birthdayComponents = self.birthday else {
-            return false
-        }
-        
-        let calendar = Calendar.current
-        let nowComponents = calendar.dateComponents([.day, .month], from: Date())
-        
-        return nowComponents.day == birthdayComponents.day && nowComponents.month == birthdayComponents.month
-    }
-    
-    var nextBirthday: Date? {
+ 
+    var relevantBirthday: Date? {
         guard let birthdateDate = self.birthday?.date else {
             return nil
         }

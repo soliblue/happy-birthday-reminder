@@ -8,49 +8,36 @@ struct Provider: TimelineProvider {
         let keysToFetch: [CNKeyDescriptor] = [
             CNContactGivenNameKey as CNKeyDescriptor, CNContactNicknameKey as CNKeyDescriptor, CNContactFamilyNameKey as CNKeyDescriptor, CNContactThumbnailImageDataKey as CNKeyDescriptor, CNContactBirthdayKey as CNKeyDescriptor
         ]
-        // Attempt to fetch contacts from the default container
         guard let contacts = try? store.unifiedContacts(matching: CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier()), keysToFetch: keysToFetch) else {
             return []
         }
-        
-        // Prepare the calendar and current date
-        let calendar = Calendar.current
-        let currentDate = Date()
-        let startOfDay = calendar.startOfDay(for: currentDate)
-        let currentYear = calendar.component(.year, from: currentDate)
-        let cutoffDate = calendar.date(byAdding: .day, value: 14, to: startOfDay)!
-
-        // Filter and map contacts with upcoming birthdays
-        let upcomingBirthdays = contacts.compactMap { contact -> CNContact? in
-            guard let birthday = contact.birthday,
-                  let birthMonth = birthday.month,
-                  let birthDay = birthday.day,
-                  let thisYearBirthday = calendar.date(from: DateComponents(year: currentYear, month: birthMonth, day: birthDay))
-            else {
-                return nil
-            }
-            
-            // Check if this year's birthday is upcoming or if it is today
-            if thisYearBirthday >= startOfDay && thisYearBirthday <= cutoffDate {
-                return contact
-            } else if thisYearBirthday < startOfDay {
-                // Check if the birthday next year is within the next 14 days
-                if let nextYearBirthday = calendar.date(byAdding: .year, value: 1, to: thisYearBirthday), nextYearBirthday <= cutoffDate {
-                    return contact
-                }
-            }
-            return nil
-        }.sorted { // Sort the contacts by the upcoming birthday dates
-            guard let bday1 = $0.birthday, let bday2 = $1.birthday else { return false }
-            let date1 = calendar.date(from: DateComponents(year: currentYear, month: bday1.month, day: bday1.day))!
-            let date2 = calendar.date(from: DateComponents(year: currentYear, month: bday2.month, day: bday2.day))!
-            return date1 < date2
+        let contactsWithBirthdays = contacts.filter { contact in
+            return contact.birthday != nil
         }
-        
-        // Return the contacts up to the specified limit
-        return Array(upcomingBirthdays.prefix(limit))
-    }
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        let sortedContactsWithBirthdays = contactsWithBirthdays.sorted {
+            guard let birthday1 = $0.birthday?.date, let birthday2 = $1.birthday?.date else { return false }
+            
+            let todayComponents = calendar.dateComponents([.month, .day], from: today)
+            let birthday1Components = calendar.dateComponents([.month, .day], from: birthday1)
+            let birthday2Components = calendar.dateComponents([.month, .day], from: birthday2)
+            
+            if birthday1Components == todayComponents && birthday2Components != todayComponents {
+                return true
+            } else if birthday2Components == todayComponents && birthday1Components != todayComponents {
+                return false
+            }
 
+            let nextBirthday1 = calendar.nextDate(after: today, matching: birthday1Components, matchingPolicy: .nextTimePreservingSmallerComponents)!
+            let nextBirthday2 = calendar.nextDate(after: today, matching: birthday2Components, matchingPolicy: .nextTimePreservingSmallerComponents)!
+
+            return nextBirthday1 < nextBirthday2
+        }
+
+        return Array(sortedContactsWithBirthdays.prefix(limit))
+    }
+    
     
     
     func placeholder(in context: Context) -> BirthdayEntry {

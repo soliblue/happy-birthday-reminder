@@ -26,18 +26,18 @@ class ContactViewModel: ObservableObject {
     }
     
     var monthSections: [MonthInfo: [CNContact]] {
-        let contactsWithBirthday = filteredContacts().filter { $0.nextBirthday != nil }
+        let contactsWithBirthday = filteredContacts().filter { $0.relevantBirthday != nil }
         
         let sortedContactsWithBirthday = contactsWithBirthday.sorted {
-            let date1 = $0.nextBirthday!
-            let date2 = $1.nextBirthday!
+            let date1 = $0.relevantBirthday!
+            let date2 = $1.relevantBirthday!
             let day1 = Calendar.current.component(.day, from: date1)
             let day2 = Calendar.current.component(.day, from: date2)
             return day1 < day2 || (day1 == day2 && date1 < date2)
         }
         
         return Dictionary(grouping: sortedContactsWithBirthday, by: {
-            MonthInfo(number: Calendar.current.component(.month, from: $0.nextBirthday!), name: $0.nextBirthday!.month)
+            MonthInfo(number: Calendar.current.component(.month, from: $0.relevantBirthday!), name: $0.relevantBirthday!.month)
         })
     }
     
@@ -86,7 +86,7 @@ class ContactViewModel: ObservableObject {
             
             // Step 2: Schedule new notifications for birthdays in the next 30 days
             let upcomingBirthdays = contacts.filter { contact in
-                guard let nextBirthday = contact.nextBirthday else { return false }
+                guard let nextBirthday = contact.relevantBirthday else { return false }
                 let currentDate = Date()
                 let dayDifference = Calendar.current.dateComponents([.day], from: currentDate, to: nextBirthday).day!
                 return dayDifference > 0 && dayDifference <= 31
@@ -96,9 +96,9 @@ class ContactViewModel: ObservableObject {
                 let body = "It's \(contact.name)'s birthday today! 🎉"
                 
                 if let imageData = contact.thumbnailImageData {
-                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.nextBirthday!, imageData: imageData)
+                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.relevantBirthday!, imageData: imageData)
                 } else {
-                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.nextBirthday!)
+                    self.notificationsService.scheduleNotification(title: title, body: body, categoryIdentifier: ContactViewModel.birthdayNotificationIdentifier, triggerDate: contact.relevantBirthday!)
                 }
             }
         }

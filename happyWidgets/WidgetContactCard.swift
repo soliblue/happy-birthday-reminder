@@ -3,24 +3,23 @@ import Contacts
 
 struct WidgetContactCard: View {
     let contact: CNContact
-
+    
     var body: some View {
-        HStack{
-            Avatar(imageData: contact.thumbnailImageData, size: 15)
-            Text(contact.shortName)
-                .lineLimit(1)
-                .font(.caption)
+        if let relevantBirthday = contact.relevantBirthday {
+            HStack{
+                Avatar(imageData: contact.thumbnailImageData, size: 15)
+                Text(contact.shortName)
+                    .lineLimit(1)
+                    .font(.caption)
                 
-            Spacer()
-            VStack {
-                if contact.hasBirthday() {
+                Spacer()
+                if relevantBirthday.isToday {
                     BirthdayIcon(size: 15)
                 } else {
-                    if let nextBirthdayString = contact.nextBirthday?.relativeString {
-                        Text(nextBirthdayString).font(.caption)
-                    }
+                    Text(relevantBirthday.relativeString).font(.caption2)
                 }
             }
         }
+        
     }
 }

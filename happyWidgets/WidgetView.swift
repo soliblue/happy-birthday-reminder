@@ -9,12 +9,12 @@ struct BirthdayEntry: TimelineEntry {
 
 struct BirthdayWidgetEntryView: View {
     var entry: BirthdayEntry
-
+    
     var body: some View {
         VStack(spacing: 10) {
-            ForEach(Array(entry.upcomingBirthdays.prefix(3).enumerated()), id: \.element.identifier) { index, contact in
+            ForEach(Array(entry.upcomingBirthdays.enumerated()), id: \.element.identifier) { index, contact in
                 WidgetContactCard(contact: contact)
-                if index < 2 {
+                if index < entry.upcomingBirthdays.count - 1 {
                     Divider()
                 }
             }
