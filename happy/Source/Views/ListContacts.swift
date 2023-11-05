@@ -8,7 +8,10 @@ struct ListContacts: View {
         ZStack {
             if viewModel.accessDenied {
                 AllowContactsAccess()
-            } else {
+            } else if !viewModel.contacts.isEmpty && viewModel.monthSections.isEmpty {
+                ListContactsIsEmpty()
+            }
+            else {
                 let currentMonth = Calendar.current.component(.month, from: Date())
                 let sortedKeys = Array(viewModel.monthSections.keys).sorted {
                     let diff1 = ($0.number - currentMonth + 12) % 12

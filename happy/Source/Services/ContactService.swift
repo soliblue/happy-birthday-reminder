@@ -19,7 +19,7 @@ class ContactService {
         }
     }
     
-    func fetchContacts(completion: @escaping ([CNContact]) -> Void) {
+    func fetchContacts(completion: @escaping (Bool, [CNContact]) -> Void) {
         self.requestAccess { granted in
             if granted {
                 let requiredKeys = CNContactViewController.descriptorForRequiredKeys()
@@ -27,11 +27,13 @@ class ContactService {
                 let predicate = CNContact.predicateForContactsInContainer(withIdentifier: self.store.defaultContainerIdentifier())
                 do {
                     let contacts = try self.store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-                    completion(contacts)
+                    completion(true,contacts)
                 } catch {
                     print("Failed to fetch contacts:", error)
-                    completion([])
+                    completion(true,[])
                 }
+            } else {
+                completion(false,[])
             }
         }
     }

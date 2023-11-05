@@ -4,6 +4,8 @@
 <dict>
 	<key>NSContactsUsageDescription</key>
 	<string>We need access to your contacts to keep track of birthdays. Your data stays safe and on-device.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>We need access to your calender to import existing birthdates. Your data stays safe and on-device.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

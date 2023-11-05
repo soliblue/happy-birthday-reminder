@@ -23,13 +23,14 @@
 		FB4732262AF62141003604D2 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
 		FB4732282AF62214003604D2 /* WidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732272AF62214003604D2 /* WidgetProvider.swift */; };
 		FB47322A2AF622BD003604D2 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732292AF622BD003604D2 /* WidgetView.swift */; };
-		FB47322C2AF62F69003604D2 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47322B2AF62F69003604D2 /* SendMessageButton.swift */; };
 		FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */; };
 		FB4732322AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */; };
 		FB4732342AF696FC003604D2 /* ClearBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */; };
 		FB4732362AF697B1003604D2 /* AddBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */; };
 		FB4732382AF699ED003604D2 /* EditBirthdateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732372AF699ED003604D2 /* EditBirthdateButton.swift */; };
 		FB47323C2AF6A54E003604D2 /* ContactBirthdayActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */; };
+		FB4732422AF7A8C0003604D2 /* ListContactsIsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732412AF7A8C0003604D2 /* ListContactsIsEmpty.swift */; };
+		FB4732442AF7B694003604D2 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4732432AF7B694003604D2 /* SendMessageButton.swift */; };
 		FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358292AE6DC150047A61F /* Avatar.swift */; };
 		FB53582C2AE6E32E0047A61F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53582B2AE6E32E0047A61F /* DateExtension.swift */; };
 		FB5358322AE7CB680047A61F /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358312AE7CB680047A61F /* ContactService.swift */; };
@@ -86,13 +87,14 @@
 		FB4732212AF61C5F003604D2 /* WidgetContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WidgetContactCard.swift; path = happyWidgets/WidgetContactCard.swift; sourceTree = SOURCE_ROOT; };
 		FB4732272AF62214003604D2 /* WidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetProvider.swift; sourceTree = "<group>"; };
 		FB4732292AF622BD003604D2 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
-		FB47322B2AF62F69003604D2 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
 		FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRightToClearBirthdate.swift; sourceTree = "<group>"; };
 		FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeLeftToEditBirthdate.swift; sourceTree = "<group>"; };
 		FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBirthdateButton.swift; sourceTree = "<group>"; };
 		FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdateButton.swift; sourceTree = "<group>"; };
 		FB4732372AF699ED003604D2 /* EditBirthdateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBirthdateButton.swift; sourceTree = "<group>"; };
 		FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBirthdayActions.swift; sourceTree = "<group>"; };
+		FB4732412AF7A8C0003604D2 /* ListContactsIsEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactsIsEmpty.swift; sourceTree = "<group>"; };
+		FB4732432AF7B694003604D2 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
 		FB5358292AE6DC150047A61F /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		FB53582B2AE6E32E0047A61F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FB5358312AE7CB680047A61F /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
@@ -165,8 +167,8 @@
 				FB5358292AE6DC150047A61F /* Avatar.swift */,
 				FB53585D2AEC2F740047A61F /* SearchBar.swift */,
 				FB53584E2AE9C9D90047A61F /* BirthdayIcon.swift */,
-				FB47322B2AF62F69003604D2 /* SendMessageButton.swift */,
 				FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */,
+				FB4732432AF7B694003604D2 /* SendMessageButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,6 +232,7 @@
 			children = (
 				FB7A71232AE68AEA009874C8 /* Home.swift */,
 				FB7A71272AE68B1A009874C8 /* ListContacts.swift */,
+				FB4732412AF7A8C0003604D2 /* ListContactsIsEmpty.swift */,
 				FB7A71252AE68B06009874C8 /* EditContacts.swift */,
 				FB4732172AF5763F003604D2 /* CreateContact.swift */,
 				FBADC52A2AED12DB00C3A546 /* ContactCard.swift */,
@@ -391,6 +394,7 @@
 				FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */,
 				FB53582C2AE6E32E0047A61F /* DateExtension.swift in Sources */,
 				FB4732342AF696FC003604D2 /* ClearBirthdateButton.swift in Sources */,
+				FB4732442AF7B694003604D2 /* SendMessageButton.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* EditContacts.swift in Sources */,
 				FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */,
@@ -399,7 +403,6 @@
 				FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */,
 				FBADC52B2AED12DB00C3A546 /* ContactCard.swift in Sources */,
 				FB53582A2AE6DC150047A61F /* Avatar.swift in Sources */,
-				FB47322C2AF62F69003604D2 /* SendMessageButton.swift in Sources */,
 				FB7A71282AE68B1A009874C8 /* ListContacts.swift in Sources */,
 				FB5358342AE7D1040047A61F /* ContactViewModel.swift in Sources */,
 				FB5358362AE7D3100047A61F /* ContactCompactCard.swift in Sources */,
@@ -408,6 +411,7 @@
 				FB4732182AF5763F003604D2 /* CreateContact.swift in Sources */,
 				FBADC5362AEF03E200C3A546 /* AllowContactsAccess.swift in Sources */,
 				FB4732382AF699ED003604D2 /* EditBirthdateButton.swift in Sources */,
+				FB4732422AF7A8C0003604D2 /* ListContactsIsEmpty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +443,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy.happyWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -466,7 +470,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy.happyWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -613,7 +617,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -646,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

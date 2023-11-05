@@ -42,11 +42,15 @@ class ContactViewModel: ObservableObject {
     }
     
     func fetchContacts() {
-        self.contactsService.fetchContacts { contacts in
+        self.contactsService.fetchContacts { accessGranted, contacts in
             DispatchQueue.main.async {
-                self.contacts = contacts
+                if accessGranted {
+                    self.contacts = contacts
+                    self.scheduleUpcomingBirthdays(for: contacts)
+                } else {
+                    self.accessDenied = true
+                }
             }
-            self.scheduleUpcomingBirthdays(for: contacts)
         }
     }
     
