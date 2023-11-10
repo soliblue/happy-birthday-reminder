@@ -25,6 +25,15 @@ class ContactViewModel: ObservableObject {
         fetchContacts()
     }
     
+    var monthSectionsSortedKeys: [MonthInfo] {
+        let currentMonth = Calendar.current.component(.month, from: Date())
+        return Array(monthSections.keys).sorted {
+            let diff1 = ($0.number - currentMonth + 12) % 12
+            let diff2 = ($1.number - currentMonth + 12) % 12
+            return diff1 < diff2
+        }
+    }
+    
     var monthSections: [MonthInfo: [CNContact]] {
         let contactsWithBirthday = filteredContacts().filter { $0.relevantBirthday != nil }
         

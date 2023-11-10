@@ -40,6 +40,9 @@
 		FB5358582AEB94570047A61F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5358572AEB94570047A61F /* NotificationService.swift */; };
 		FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585D2AEC2F740047A61F /* SearchBar.swift */; };
 		FB5358602AECD9900047A61F /* CNContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53585F2AECD9900047A61F /* CNContactExtension.swift */; };
+		FB5CD81D2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CD81C2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift */; };
+		FB5CD81F2AFB7095009637CD /* NavigateToEditContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CD81E2AFB7095009637CD /* NavigateToEditContacts.swift */; };
+		FB5CD8212AFB9675009637CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB47320B2AF388E1003604D2 /* Assets.xcassets */; };
 		FB7A70EE2AE68AAB009874C8 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A70ED2AE68AAB009874C8 /* AppMain.swift */; };
 		FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7A70F12AE68AAD009874C8 /* Assets.xcassets */; };
 		FB7A71242AE68AEA009874C8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A71232AE68AEA009874C8 /* Home.swift */; };
@@ -105,6 +108,8 @@
 		FB5358572AEB94570047A61F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FB53585D2AEC2F740047A61F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		FB53585F2AECD9900047A61F /* CNContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNContactExtension.swift; sourceTree = "<group>"; };
+		FB5CD81C2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWidgetAlertSheetModifier.swift; sourceTree = "<group>"; };
+		FB5CD81E2AFB7095009637CD /* NavigateToEditContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToEditContacts.swift; sourceTree = "<group>"; };
 		FB7A70EA2AE68AAB009874C8 /* happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7A70ED2AE68AAB009874C8 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		FB7A70F12AE68AAD009874C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				FB7A711D2AE68AB7009874C8 /* Views */,
+				FB5CD8202AFB7AA1009637CD /* Modifiers */,
 				FB53582D2AE6E63D0047A61F /* Components */,
 				FB7A71202AE68AC6009874C8 /* Extensions */,
 				FB5358392AE7E3FF0047A61F /* Services */,
@@ -192,6 +198,16 @@
 				FB5358572AEB94570047A61F /* NotificationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FB5CD8202AFB7AA1009637CD /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FB5CD81C2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift */,
+				FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */,
+				FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		FB7A70E12AE68AAB009874C8 = {
@@ -234,11 +250,10 @@
 				FB7A71272AE68B1A009874C8 /* ListContacts.swift */,
 				FB4732412AF7A8C0003604D2 /* ListContactsIsEmpty.swift */,
 				FB7A71252AE68B06009874C8 /* EditContacts.swift */,
+				FB5CD81E2AFB7095009637CD /* NavigateToEditContacts.swift */,
 				FB4732172AF5763F003604D2 /* CreateContact.swift */,
 				FBADC52A2AED12DB00C3A546 /* ContactCard.swift */,
 				FB47323B2AF6A54E003604D2 /* ContactBirthdayActions.swift */,
-				FB4732312AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift */,
-				FB47322F2AF6695D003604D2 /* SwipeRightToClearBirthdate.swift */,
 				FB5358352AE7D3100047A61F /* ContactCompactCard.swift */,
 				FB4732332AF696FC003604D2 /* ClearBirthdateButton.swift */,
 				FB4732352AF697B1003604D2 /* AddBirthdateButton.swift */,
@@ -313,7 +328,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					FB4731FC2AF388E0003604D2 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -357,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5CD8212AFB9675009637CD /* Assets.xcassets in Resources */,
 				FB7A70F22AE68AAD009874C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +404,7 @@
 				FB47323C2AF6A54E003604D2 /* ContactBirthdayActions.swift in Sources */,
 				FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */,
 				FB5358322AE7CB680047A61F /* ContactService.swift in Sources */,
+				FB5CD81F2AFB7095009637CD /* NavigateToEditContacts.swift in Sources */,
 				FB47320F2AF388E1003604D2 /* happyWidgets.intentdefinition in Sources */,
 				FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */,
 				FB4732322AF670F3003604D2 /* SwipeLeftToEditBirthdate.swift in Sources */,
@@ -397,6 +414,7 @@
 				FB4732442AF7B694003604D2 /* SendMessageButton.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* EditContacts.swift in Sources */,
+				FB5CD81D2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift in Sources */,
 				FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */,
 				FB4732362AF697B1003604D2 /* AddBirthdateButton.swift in Sources */,
 				FB7A71242AE68AEA009874C8 /* Home.swift in Sources */,
@@ -438,6 +456,7 @@
 				INFOPLIST_FILE = happyWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = happyWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,9 +466,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy.happyWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +486,7 @@
 				INFOPLIST_FILE = happyWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = happyWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,9 +496,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy.happyWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -516,6 +540,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -531,7 +556,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = happy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -577,6 +602,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -586,7 +612,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = happy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -608,16 +634,19 @@
 				DEVELOPMENT_TEAM = X52A94XDJB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = happy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -641,16 +670,19 @@
 				DEVELOPMENT_TEAM = X52A94XDJB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = happy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = soli.happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -22,6 +22,7 @@ struct BirthdayWidgetEntryView: View {
                 Text("No upcoming birthdays.")
                     .font(.subheadline)
             }
-        }.padding()
+        }.padding(.horizontal,5)
+        
     }
 }
