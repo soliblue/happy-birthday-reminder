@@ -11,12 +11,11 @@ struct WidgetContactCard: View {
                 Text(contact.shortName)
                     .lineLimit(1)
                     .font(.caption)
-                
                 Spacer()
                 if relevantBirthday.isToday {
                     BirthdayIcon(size: 15)
                 } else {
-                    Text(relevantBirthday.relativeString).font(.caption2)
+                    Text(relevantBirthday.relativeString).font(.caption2).scaleEffect(0.75).lineLimit(1)
                 }
             }
         }
