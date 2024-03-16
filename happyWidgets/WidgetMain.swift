@@ -13,6 +13,7 @@ struct WidgetMain: WidgetBundle {
             .configurationDisplayName("Upcoming Birthdays")
             .description("Shows the upcoming birthdays.")
             .supportedFamilies([.systemSmall, .systemMedium])
+            .contentMarginsDisabled()
         }
     }
 
