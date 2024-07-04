@@ -53,3 +53,7 @@ struct CNContactViewControllerWrapper: UIViewControllerRepresentable {
         }
     }
 }
+
+#Preview {
+    return CreateContact(viewModel: ContactViewModel())
+}

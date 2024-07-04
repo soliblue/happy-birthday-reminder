@@ -31,3 +31,18 @@ struct ContactCard: View {
         }
     }
 }
+
+#Preview {
+    let mockContact = CNMutableContact()
+    mockContact.givenName = "Jane"
+    mockContact.familyName = "Smith"
+    
+    let calendar = Calendar.current
+    let birthdate = calendar.date(byAdding: .year, value: -30, to: Date())!
+    mockContact.birthday = calendar.dateComponents([.year, .month, .day], from: birthdate)
+    
+    return ContactCard(
+        contact: mockContact,
+        viewModel: ContactViewModel()
+    )
+}

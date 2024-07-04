@@ -28,3 +28,7 @@ struct NavigateToEditContacts: View {
         }
     }
 }
+
+#Preview {
+    NavigateToEditContacts()
+}

@@ -74,10 +74,15 @@ class ContactViewModel: ObservableObject {
     func filteredContacts() -> [CNContact] {
         let searchWords = searchText.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: " ")
         
+        // Filter out contacts with empty names
+        let contactsWithNames = contacts.filter { contact in
+            !contact.shortName.isEmpty
+        }
+        
         if searchWords.isEmpty {
-            return contacts
+            return contactsWithNames
         } else {
-            return contacts.filter { contact in
+            return contactsWithNames.filter { contact in
                 let contactWords = ["\(contact.givenName)", "\(contact.familyName)", "\(contact.nickname)"].joined(separator: " ").split(separator: " ")
                 
                 return searchWords.allSatisfy { searchWord in

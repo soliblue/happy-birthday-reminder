@@ -10,3 +10,9 @@ struct BirthdayIcon: View {
             .frame(width: size, height: size)
     }
 }
+
+#Preview {
+    BirthdayIcon()
+        .previewLayout(.sizeThatFits)
+        .padding()
+}

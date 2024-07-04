@@ -23,3 +23,7 @@ struct Avatar: View {
         }
     }
 }
+
+#Preview {
+    Avatar(imageData: nil, size: 192)
+}

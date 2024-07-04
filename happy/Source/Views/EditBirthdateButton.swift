@@ -16,3 +16,16 @@ struct EditBirthdateButton: View {
             }
     }
 }
+
+#Preview {
+    let mockContact = CNMutableContact()
+    mockContact.givenName = "John"
+    mockContact.familyName = "Doe"
+    
+    return EditBirthdateButton(
+        contact: mockContact,
+        viewModel: ContactViewModel(),
+        selectedDate: .constant(Date()),
+        isDatePickerShown: .constant(true)
+    )
+}

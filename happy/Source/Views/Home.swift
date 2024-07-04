@@ -10,3 +10,7 @@ struct Home: View {
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
+#Preview {
+    Home()
+}

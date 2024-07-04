@@ -20,3 +20,7 @@ struct ListContactsIsEmpty: View {
         }.padding()
     }
 }
+
+#Preview {
+    ListContactsIsEmpty()
+}

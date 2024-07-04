@@ -51,3 +51,27 @@ struct ContactCompactCard: View {
         }.padding(.vertical)
     }
 }
+
+#Preview {
+    let mockContactWithBirthday = CNMutableContact()
+    mockContactWithBirthday.givenName = "Jane"
+    mockContactWithBirthday.familyName = "Smith"
+    let calendar = Calendar.current
+    let birthdate = calendar.date(byAdding: .year, value: -30, to: Date())!
+    mockContactWithBirthday.birthday = calendar.dateComponents([.year, .month, .day], from: birthdate)
+
+    let mockContactWithoutBirthday = CNMutableContact()
+    mockContactWithoutBirthday.givenName = "John"
+    mockContactWithoutBirthday.familyName = "Doe"
+
+    return VStack(spacing: 20) {
+        ContactCompactCard(
+            contact: mockContactWithBirthday,
+            viewModel: ContactViewModel()
+        )
+        ContactCompactCard(
+            contact: mockContactWithoutBirthday,
+            viewModel: ContactViewModel()
+        )
+    }.padding()
+}

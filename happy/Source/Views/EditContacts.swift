@@ -23,3 +23,7 @@ struct EditContacts: View {
         .padding(.horizontal)
     }
 }
+
+#Preview {
+    EditContacts()
+}

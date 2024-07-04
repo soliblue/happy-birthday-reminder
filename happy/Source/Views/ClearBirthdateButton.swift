@@ -31,3 +31,15 @@ struct ClearBirthdateButton: View {
         }
     }
 }
+
+#Preview {
+    let mockContact = CNMutableContact()
+    mockContact.givenName = "John"
+    mockContact.familyName = "Doe"
+    
+    return ClearBirthdateButton(
+        contact: mockContact,
+        viewModel: ContactViewModel(),
+        isDatePickerShown: .constant(true)
+    )
+}

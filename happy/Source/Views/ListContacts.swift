@@ -36,3 +36,7 @@ struct ListContacts: View {
         }
     }
 }
+
+#Preview {
+    ListContacts()
+}

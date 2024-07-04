@@ -45,3 +45,18 @@ struct ContactBirthdayActions: View {
         }
     }
 }
+
+#Preview {
+    let mockContact = CNMutableContact()
+    mockContact.givenName = "Alice"
+    mockContact.familyName = "Johnson"
+    let phoneNumber = CNPhoneNumber(stringValue: "1234567890")
+    mockContact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberMobile, value: phoneNumber)]
+    
+    let birthdate = Date()  // Today's date for the preview
+    
+    return ContactBirthdayActions(
+        contact: mockContact,
+        birthdate: birthdate
+    )
+}

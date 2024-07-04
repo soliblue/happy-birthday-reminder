@@ -52,6 +52,7 @@
 		FBADC5322AEE7B4700C3A546 /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5302AEE7B4700C3A546 /* AppDataModel.xcdatamodeld */; };
 		FBADC5342AEEC05F00C3A546 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */; };
 		FBADC5362AEF03E200C3A546 /* AllowContactsAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */; };
+		FBD0E98A2C36A74E00F9E9C4 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD0E9892C36A74C00F9E9C4 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		FBADC5312AEE7B4700C3A546 /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FBADC5332AEEC05F00C3A546 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FBADC5352AEF03E200C3A546 /* AllowContactsAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowContactsAccess.swift; sourceTree = "<group>"; };
+		FBD0E9892C36A74C00F9E9C4 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		FB7A711D2AE68AB7009874C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FBD0E9892C36A74C00F9E9C4 /* test.swift */,
 				FB7A71232AE68AEA009874C8 /* Home.swift */,
 				FB7A71272AE68B1A009874C8 /* ListContacts.swift */,
 				FB4732412AF7A8C0003604D2 /* ListContactsIsEmpty.swift */,
@@ -328,7 +331,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					FB4731FC2AF388E0003604D2 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -414,6 +417,7 @@
 				FB4732442AF7B694003604D2 /* SendMessageButton.swift in Sources */,
 				FB53585E2AEC2F740047A61F /* SearchBar.swift in Sources */,
 				FB7A71262AE68B06009874C8 /* EditContacts.swift in Sources */,
+				FBD0E98A2C36A74E00F9E9C4 /* test.swift in Sources */,
 				FB5CD81D2AFB6FD0009637CD /* ShowWidgetAlertSheetModifier.swift in Sources */,
 				FB4732302AF6695D003604D2 /* SwipeRightToClearBirthdate.swift in Sources */,
 				FB4732362AF697B1003604D2 /* AddBirthdateButton.swift in Sources */,
@@ -631,7 +635,6 @@
 		FB7A71152AE68AAD009874C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,7 +671,6 @@
 		FB7A71162AE68AAD009874C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
